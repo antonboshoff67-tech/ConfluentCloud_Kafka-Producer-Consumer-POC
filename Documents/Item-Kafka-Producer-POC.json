@@ -1,0 +1,147 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Item Kafka Producer Application - API",
+    "description": "This is a Spring Boot RESTful Consumer Application to test Item Kafka Producer using springdoc-openapi and OpenAPI 3."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8081",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Item Kafka Producer",
+      "description": "The Item Kafka Producer API"
+    }
+  ],
+  "paths": {
+    "item-kafka/app/publish-items/v1": {
+      "post": {
+        "tags": [
+          "Reading AMOS Item Table and publish them to the Kafka Producer"
+        ],
+        "summary": "Publish Item to Kafka",
+        "description": "Item Messages published to Kafka",
+        "operationId": "createMsg",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Item"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Item Sent",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Input",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Service Down",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/item-kafka/app/consume-status/v1": {
+      "post": {
+        "tags": [
+          "Item Kafka Consumer API"
+        ],
+        "summary": "Consuming an Item from Kafka",
+        "description": "Item Consumed",
+        "operationId": "ReceiveMsg",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Item"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Message Received",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Input",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Service Down",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceRequest": {
+        "type": "object",
+        "properties": {
+          "msg": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

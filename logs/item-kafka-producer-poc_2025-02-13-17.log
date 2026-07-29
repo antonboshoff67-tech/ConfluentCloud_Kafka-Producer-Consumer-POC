@@ -1,0 +1,575 @@
+2025-02-13 17:06:56.772  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:55] Starting KafkaItemProducerPocApplication using Java 15.0.2 on W49204302 with PID 15392 (C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC\target\classes started by W7178930 in C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC) 
+2025-02-13 17:06:56.776  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:640] The following 2 profiles are active: "swagger", "dev" 
+2025-02-13 17:06:57.837  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-02-13 17:06:57.956  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces. 
+2025-02-13 17:06:59.067  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http) 
+2025-02-13 17:06:59.076  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8081"] 
+2025-02-13 17:06:59.077  INFO [org.apache.catalina.core.StandardService:173] Starting service [Tomcat] 
+2025-02-13 17:06:59.085  INFO [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2025-02-13 17:06:59.254  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext 
+2025-02-13 17:06:59.255  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2438 ms 
+2025-02-13 17:06:59.884  INFO [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting... 
+2025-02-13 17:07:00.841  INFO [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed. 
+2025-02-13 17:07:00.875  INFO [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-02-13 17:07:00.925  INFO [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final 
+2025-02-13 17:07:01.186  INFO [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2025-02-13 17:07:01.383  INFO [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect 
+2025-02-13 17:07:02.293  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2025-02-13 17:07:02.310  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-13 17:07:03.307  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2025-02-13 17:07:03.472 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:367] 13 mappings in 'requestMappingHandlerMapping' 
+2025-02-13 17:07:04.010 DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:188] Patterns [/agent/swagger-ui*/**] in 'resourceHandlerMapping' 
+2025-02-13 17:07:04.081 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:625] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice 
+2025-02-13 17:07:04.141 DEBUG [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:307] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice 
+2025-02-13 17:07:04.625  INFO [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] Exposing 1 endpoint(s) beneath base path '/actuator' 
+2025-02-13 17:07:04.807  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-13 17:07:05.050  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-13 17:07:05.050  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-13 17:07:05.051  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739459225048 
+2025-02-13 17:07:05.055  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-1, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-13 17:07:05.069  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-13 17:07:05.076  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-13 17:07:05.076  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-13 17:07:05.077  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739459225076 
+2025-02-13 17:07:05.077  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-2, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-13 17:07:05.081  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-13 17:07:05.095  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-13 17:07:05.096  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-13 17:07:05.096  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739459225095 
+2025-02-13 17:07:05.097  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-3, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-13 17:07:05.100  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8081"] 
+2025-02-13 17:07:05.123  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path '' 
+2025-02-13 17:07:05.145  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:61] Started KafkaItemProducerPocApplication in 8.799 seconds (JVM running for 9.762) 
+2025-02-13 17:07:05.697  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 2 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:05.698  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 2 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:05.701  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-1, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-13 17:07:05.701  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-3, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-13 17:07:05.760  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 2 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:05.761  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-2, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-13 17:07:05.805  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 4 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:05.808  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 4 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:05.894  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 4 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:05.921  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 6 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:05.926  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 6 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.003  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 6 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.032  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 8 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.035  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 8 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.115  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 8 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.143  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 10 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.147  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 10 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.227  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 10 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.254  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 12 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.257  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 12 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.335  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 12 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.363  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 14 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.367  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 14 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.445  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 14 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.473  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 16 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.477  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 16 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.557  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 16 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.583  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 18 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.587  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 18 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.667  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 18 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.695  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 20 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.698  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 20 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.778  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 20 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.806  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 22 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.809  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 22 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.887  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 22 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:06.916  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 24 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:06.920  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 24 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.000  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 24 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.028  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 26 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:07.032  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 26 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.110  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 26 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.139  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 28 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:07.142  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 28 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.223  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 28 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.250  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 30 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:07.254  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 30 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.332  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-2, groupId=item_group] Error while fetching metadata with correlation id 30 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.360  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error while fetching metadata with correlation id 32 : {Item_Topic=UNKNOWN_TOPIC_OR_PARTITION} 
+2025-02-13 17:07:07.363  WARN [org.apache.kafka.clients.NetworkClient:1145] [Consumer clientId=consumer-item_group-3, groupId=item_group] Error while fetching metadata with correlation id 32 : {Item_Topic=LEADER_NOT_AVAILABLE} 
+2025-02-13 17:07:07.445  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-2, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-13 17:07:07.448  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.475  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-3, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-13 17:07:07.475  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-13 17:07:07.478  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.478  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.495  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-2-4a0d1e9d-bb9f-4ab6-ac61-5cd13565031a 
+2025-02-13 17:07:07.495  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-3-58bf517e-e945-475c-8a6b-9778ed7ce3c5 
+2025-02-13 17:07:07.495  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-1-2d5c45c4-da40-42a5-a97d-8de5df5e4db6 
+2025-02-13 17:07:07.496  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-13 17:07:07.496  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-13 17:07:07.496  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-13 17:07:07.497  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.497  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.497  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-13 17:07:07.536  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-item_group-2-4a0d1e9d-bb9f-4ab6-ac61-5cd13565031a', protocol='range'} 
+2025-02-13 17:07:07.536  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-item_group-1-2d5c45c4-da40-42a5-a97d-8de5df5e4db6', protocol='range'} 
+2025-02-13 17:07:07.536  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-item_group-3-58bf517e-e945-475c-8a6b-9778ed7ce3c5', protocol='range'} 
+2025-02-13 17:07:07.545  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:712] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 1: {consumer-item_group-1-2d5c45c4-da40-42a5-a97d-8de5df5e4db6=Assignment(partitions=[Item_Topic-0]), consumer-item_group-3-58bf517e-e945-475c-8a6b-9778ed7ce3c5=Assignment(partitions=[]), consumer-item_group-2-4a0d1e9d-bb9f-4ab6-ac61-5cd13565031a=Assignment(partitions=[])} 
+2025-02-13 17:07:07.600  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-item_group-1-2d5c45c4-da40-42a5-a97d-8de5df5e4db6', protocol='range'} 
+2025-02-13 17:07:07.600  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-item_group-3-58bf517e-e945-475c-8a6b-9778ed7ce3c5', protocol='range'} 
+2025-02-13 17:07:07.600  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-item_group-2-4a0d1e9d-bb9f-4ab6-ac61-5cd13565031a', protocol='range'} 
+2025-02-13 17:07:07.601  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-1, groupId=item_group] Notifying assignor about the new Assignment(partitions=[Item_Topic-0]) 
+2025-02-13 17:07:07.601  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-3, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-13 17:07:07.601  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-2, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-13 17:07:07.602  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-3, groupId=item_group] Adding newly assigned partitions:  
+2025-02-13 17:07:07.602  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-2, groupId=item_group] Adding newly assigned partitions:  
+2025-02-13 17:07:07.604  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-1, groupId=item_group] Adding newly assigned partitions: Item_Topic-0 
+2025-02-13 17:07:07.604  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-13 17:07:07.604  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-13 17:07:07.620  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1545] [Consumer clientId=consumer-item_group-1, groupId=item_group] Found no committed offset for partition Item_Topic-0 
+2025-02-13 17:07:07.624  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1545] [Consumer clientId=consumer-item_group-1, groupId=item_group] Found no committed offset for partition Item_Topic-0 
+2025-02-13 17:07:07.644  INFO [org.apache.kafka.clients.consumer.internals.SubscriptionState:398] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting offset for partition Item_Topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[W49204302.woolworths.co.za:9092 (id: 0 rack: null)], epoch=0}}. 
+2025-02-13 17:07:07.672  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [Item_Topic-0] 
+2025-02-13 17:09:01.429  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-02-13 17:09:01.429  INFO [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet' 
+2025-02-13 17:09:01.430 DEBUG [org.springframework.web.servlet.DispatcherServlet:520] Detected StandardServletMultipartResolver 
+2025-02-13 17:09:01.431 DEBUG [org.springframework.web.servlet.DispatcherServlet:544] Detected AcceptHeaderLocaleResolver 
+2025-02-13 17:09:01.431 DEBUG [org.springframework.web.servlet.DispatcherServlet:569] Detected FixedThemeResolver 
+2025-02-13 17:09:01.433 DEBUG [org.springframework.web.servlet.DispatcherServlet:719] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@493489dd 
+2025-02-13 17:09:01.434 DEBUG [org.springframework.web.servlet.DispatcherServlet:783] Detected org.springframework.web.servlet.support.SessionFlashMapManager@3c7787a7 
+2025-02-13 17:09:01.434 DEBUG [org.springframework.web.servlet.DispatcherServlet:542] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data 
+2025-02-13 17:09:01.435  INFO [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 5 ms 
+2025-02-13 17:09:01.450 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/flink/start-job1", parameters={} 
+2025-02-13 17:09:01.457 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.FlinkJobController#triggerFlinkJob1() 
+2025-02-13 17:10:22.191 DEBUG [org.springframework.web.servlet.DispatcherServlet:1101] Failed to complete request: org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: org/apache/flink/connector/base/DeliveryGuarantee 
+2025-02-13 17:10:22.198 ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: org/apache/flink/connector/base/DeliveryGuarantee] with root cause java.lang.ClassNotFoundException: org.apache.flink.connector.base.DeliveryGuarantee
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.apache.flink.connector.kafka.sink.KafkaSinkBuilder.<init>(KafkaSinkBuilder.java:72)
+	at org.apache.flink.connector.kafka.sink.KafkaSink.builder(KafkaSink.java:95)
+	at za.co.woolworths.itemkafka_poc.flink.jobs.FlinkJob1.main(FlinkJob1.java:30)
+	at za.co.woolworths.itemkafka_poc.controller.FlinkJobController.triggerFlinkJob1(FlinkJobController.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2025-02-13 17:10:22.200 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] "ERROR" dispatch for POST "/error", parameters={} 
+2025-02-13 17:10:22.202 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest) 
+2025-02-13 17:10:22.238 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:268] Using 'application/json', given [*/*] and supported [application/json, application/*+json] 
+2025-02-13 17:10:22.240 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:119] Writing [{timestamp=Thu Feb 13 17:10:22 SAST 2025, status=500, error=Internal Server Error, path=/flink/start (truncated)...] 
+2025-02-13 17:10:22.283 DEBUG [org.springframework.web.servlet.DispatcherServlet:1127] Exiting from "ERROR" dispatch, status 500 
+2025-02-13 17:11:02.980 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/flink/start-job1", parameters={} 
+2025-02-13 17:11:02.980 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.FlinkJobController#triggerFlinkJob1() 
+2025-02-13 17:11:12.116 DEBUG [org.springframework.web.servlet.DispatcherServlet:1101] Failed to complete request: org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: org/apache/flink/connector/base/DeliveryGuarantee 
+2025-02-13 17:11:12.118 ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:175] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: org/apache/flink/connector/base/DeliveryGuarantee] with root cause java.lang.NoClassDefFoundError: org/apache/flink/connector/base/DeliveryGuarantee
+	at org.apache.flink.connector.kafka.sink.KafkaSinkBuilder.<init>(KafkaSinkBuilder.java:72)
+	at org.apache.flink.connector.kafka.sink.KafkaSink.builder(KafkaSink.java:95)
+	at za.co.woolworths.itemkafka_poc.flink.jobs.FlinkJob1.main(FlinkJob1.java:30)
+	at za.co.woolworths.itemkafka_poc.controller.FlinkJobController.triggerFlinkJob1(FlinkJobController.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+2025-02-13 17:11:12.121 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] "ERROR" dispatch for POST "/error", parameters={} 
+2025-02-13 17:11:12.123 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest) 
+2025-02-13 17:11:12.128 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:268] Using 'application/json', given [*/*] and supported [application/json, application/*+json] 
+2025-02-13 17:11:12.129 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:119] Writing [{timestamp=Thu Feb 13 17:11:12 SAST 2025, status=500, error=Internal Server Error, path=/flink/start (truncated)...] 
+2025-02-13 17:11:12.130 DEBUG [org.springframework.web.servlet.DispatcherServlet:1127] Exiting from "ERROR" dispatch, status 500 
+2025-02-13 17:11:34.896  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-2, groupId=item_group] Member consumer-item_group-2-4a0d1e9d-bb9f-4ab6-ac61-5cd13565031a sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-13 17:11:34.896  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-3, groupId=item_group] Member consumer-item_group-3-58bf517e-e945-475c-8a6b-9778ed7ce3c5 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-13 17:11:34.896  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:338] [Consumer clientId=consumer-item_group-1, groupId=item_group] Revoke previously assigned partitions Item_Topic-0 
+2025-02-13 17:11:34.897  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.897  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.897  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.897  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-2, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-13 17:11:34.897  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-1, groupId=item_group] Member consumer-item_group-1-2d5c45c4-da40-42a5-a97d-8de5df5e4db6 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-3, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.898  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.899  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-13 17:11:34.909  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-13 17:11:34.920  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-2 unregistered 
+2025-02-13 17:11:34.921  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-3 unregistered 
+2025-02-13 17:11:34.921  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-13 17:11:34.921  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-13 17:11:35.271  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-13 17:11:35.272  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-13 17:11:35.272  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-13 17:11:35.279  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-02-13 17:11:35.279  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-13 17:11:35.289  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-13 17:11:35.295  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-02-13 17:11:35.300  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 

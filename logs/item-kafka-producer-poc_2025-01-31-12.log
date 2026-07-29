@@ -1,0 +1,45 @@
+2025-01-31 12:52:26.991  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:310] [Consumer clientId=consumer-item_group-1, groupId=item_group] Revoke previously assigned partitions Item_Topic-0 
+2025-01-31 12:52:26.991  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1060] [Consumer clientId=consumer-item_group-3, groupId=item_group] Member consumer-item_group-3-a0052ae0-4c52-412a-9ca1-bf3a366461f5 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-01-31 12:52:26.991  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:310] [Consumer clientId=consumer-item_group-2, groupId=item_group] Revoke previously assigned partitions Item_Topic-1 
+2025-01-31 12:52:26.995  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-01-31 12:52:26.996  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-1] 
+2025-01-31 12:52:26.996  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.996  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.996  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-3, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1060] [Consumer clientId=consumer-item_group-1, groupId=item_group] Member consumer-item_group-1-e3cff27c-8960-4549-aada-b8e82e0736c7 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1060] [Consumer clientId=consumer-item_group-2, groupId=item_group] Member consumer-item_group-2-7f4d1d8e-7fe7-4df6-b8e8-22a66ad68403 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-31 12:52:26.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.998  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.998  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-2, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-31 12:52:26.998  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.998  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:26.998  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-31 12:52:27.005  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-31 12:52:27.010  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-3 unregistered 
+2025-01-31 12:52:27.011  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-2 unregistered 
+2025-01-31 12:52:27.011  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-31 12:52:27.011  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-31 12:52:27.011  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-31 12:52:27.012  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-31 12:52:27.012  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-31 12:52:27.014  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-01-31 12:52:27.014  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-31 12:52:27.018  INFO [org.apache.kafka.clients.producer.KafkaProducer:1249] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. 
+2025-01-31 12:52:27.019  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-31 12:52:27.020  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-31 12:52:27.020  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-31 12:52:27.020  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.producer for producer-1 unregistered 
+2025-01-31 12:52:27.022  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-01-31 12:52:27.030  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-01-31 12:52:27.032  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 

@@ -1,0 +1,1392 @@
+2025-02-17 16:20:38.042  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:55] Starting KafkaItemProducerPocApplication using Java 11.0.2 on W49204302 with PID 10044 (C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC\target\classes started by W7178930 in C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC) 
+2025-02-17 16:20:38.046  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:640] The following 2 profiles are active: "swagger", "dev" 
+2025-02-17 16:20:38.957  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-02-17 16:20:39.046  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces. 
+2025-02-17 16:20:40.325  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http) 
+2025-02-17 16:20:40.334  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8081"] 
+2025-02-17 16:20:40.335  INFO [org.apache.catalina.core.StandardService:173] Starting service [Tomcat] 
+2025-02-17 16:20:40.335  INFO [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2025-02-17 16:20:40.516  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext 
+2025-02-17 16:20:40.517  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2423 ms 
+2025-02-17 16:20:41.137  INFO [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting... 
+2025-02-17 16:20:42.249  INFO [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed. 
+2025-02-17 16:20:42.286  INFO [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-02-17 16:20:42.323  INFO [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final 
+2025-02-17 16:20:42.470  INFO [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2025-02-17 16:20:42.682  INFO [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect 
+2025-02-17 16:20:43.524  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2025-02-17 16:20:43.533  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-17 16:20:44.768  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2025-02-17 16:20:44.932 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:367] 15 mappings in 'requestMappingHandlerMapping' 
+2025-02-17 16:20:45.535 DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:188] Patterns [/agent/swagger-ui*/**] in 'resourceHandlerMapping' 
+2025-02-17 16:20:45.596 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:625] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice 
+2025-02-17 16:20:45.660 DEBUG [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:307] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice 
+2025-02-17 16:20:46.149  INFO [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] Exposing 1 endpoint(s) beneath base path '/actuator' 
+2025-02-17 16:20:46.312  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:20:46.651  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:20:46.652  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:20:46.653  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802046648 
+2025-02-17 16:20:46.662  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-1, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:20:46.695  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:20:46.713  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:20:46.713  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:20:46.714  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802046712 
+2025-02-17 16:20:46.715  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-2, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:20:46.722  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:20:46.737  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:20:46.738  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:20:46.739  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802046737 
+2025-02-17 16:20:46.740  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-3, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:20:46.745  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8081"] 
+2025-02-17 16:20:46.773  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path '' 
+2025-02-17 16:20:46.800  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:61] Started KafkaItemProducerPocApplication in 9.344 seconds (JVM running for 10.177) 
+2025-02-17 16:20:47.443  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-3, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:20:47.443  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-1, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:20:47.443  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-2, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:20:47.446  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-2, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:20:47.446  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-3, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:20:47.446  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:20:47.450  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.450  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.451  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.483  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-1-65cdfb1c-fed3-4312-8006-6202c36b799d 
+2025-02-17 16:20:47.483  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-2-f2b44920-4946-4c6a-a6e7-5a03014bc1c1 
+2025-02-17 16:20:47.484  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:20:47.484  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.484  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:20:47.485  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.486  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-3-eae40ea3-63c8-4ad9-a641-e31479b1eb5c 
+2025-02-17 16:20:47.487  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:20:47.487  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-17 16:20:47.499  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully joined group with generation Generation{generationId=79, memberId='consumer-item_group-2-f2b44920-4946-4c6a-a6e7-5a03014bc1c1', protocol='range'} 
+2025-02-17 16:20:47.499  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=79, memberId='consumer-item_group-1-65cdfb1c-fed3-4312-8006-6202c36b799d', protocol='range'} 
+2025-02-17 16:20:47.499  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully joined group with generation Generation{generationId=79, memberId='consumer-item_group-3-eae40ea3-63c8-4ad9-a641-e31479b1eb5c', protocol='range'} 
+2025-02-17 16:20:47.508  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:712] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 79: {consumer-item_group-1-65cdfb1c-fed3-4312-8006-6202c36b799d=Assignment(partitions=[Item_Topic-0]), consumer-item_group-2-f2b44920-4946-4c6a-a6e7-5a03014bc1c1=Assignment(partitions=[]), consumer-item_group-3-eae40ea3-63c8-4ad9-a641-e31479b1eb5c=Assignment(partitions=[])} 
+2025-02-17 16:20:47.544  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully synced group in generation Generation{generationId=79, memberId='consumer-item_group-3-eae40ea3-63c8-4ad9-a641-e31479b1eb5c', protocol='range'} 
+2025-02-17 16:20:47.544  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully synced group in generation Generation{generationId=79, memberId='consumer-item_group-2-f2b44920-4946-4c6a-a6e7-5a03014bc1c1', protocol='range'} 
+2025-02-17 16:20:47.544  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully synced group in generation Generation{generationId=79, memberId='consumer-item_group-1-65cdfb1c-fed3-4312-8006-6202c36b799d', protocol='range'} 
+2025-02-17 16:20:47.546  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-3, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-17 16:20:47.546  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-2, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-17 16:20:47.546  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-1, groupId=item_group] Notifying assignor about the new Assignment(partitions=[Item_Topic-0]) 
+2025-02-17 16:20:47.546  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-3, groupId=item_group] Adding newly assigned partitions:  
+2025-02-17 16:20:47.546  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-2, groupId=item_group] Adding newly assigned partitions:  
+2025-02-17 16:20:47.549  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-17 16:20:47.549  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-17 16:20:47.550  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-1, groupId=item_group] Adding newly assigned partitions: Item_Topic-0 
+2025-02-17 16:20:47.575  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:975] [Consumer clientId=consumer-item_group-1, groupId=item_group] Setting offset for partition Item_Topic-0 to the committed offset FetchPosition{offset=100, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[W49204302.woolworths.co.za:9092 (id: 0 rack: null)], epoch=0}} 
+2025-02-17 16:20:47.576  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [Item_Topic-0] 
+2025-02-17 16:21:09.233  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-02-17 16:21:09.234  INFO [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet' 
+2025-02-17 16:21:09.234 DEBUG [org.springframework.web.servlet.DispatcherServlet:520] Detected StandardServletMultipartResolver 
+2025-02-17 16:21:09.234 DEBUG [org.springframework.web.servlet.DispatcherServlet:544] Detected AcceptHeaderLocaleResolver 
+2025-02-17 16:21:09.234 DEBUG [org.springframework.web.servlet.DispatcherServlet:569] Detected FixedThemeResolver 
+2025-02-17 16:21:09.235 DEBUG [org.springframework.web.servlet.DispatcherServlet:719] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7ef34eb3 
+2025-02-17 16:21:09.236 DEBUG [org.springframework.web.servlet.DispatcherServlet:783] Detected org.springframework.web.servlet.support.SessionFlashMapManager@20ee660b 
+2025-02-17 16:21:09.236 DEBUG [org.springframework.web.servlet.DispatcherServlet:542] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data 
+2025-02-17 16:21:09.236  INFO [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms 
+2025-02-17 16:21:09.247 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/flink/start-simple-job", parameters={} 
+2025-02-17 16:21:09.252 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.FlinkJobController#triggerFlinkSimpleJob() 
+2025-02-17 16:21:22.586  INFO [za.co.woolworths.itemkafka_poc.service.FlinkJobService:88] Job simpleJob is now RUNNING 
+2025-02-17 16:21:25.248 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:268] Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json] 
+2025-02-17 16:21:25.249 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:119] Writing ["Flink Simple Job started successfully."] 
+2025-02-17 16:21:25.266 DEBUG [org.springframework.web.servlet.DispatcherServlet:1131] Completed 200 OK 
+2025-02-17 16:21:34.666  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:21:34.667  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:21:34.668  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:21:34.671  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb. 
+2025-02-17 16:21:34.671  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb. 
+2025-02-17 16:21:34.672  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb. 
+2025-02-17 16:21:34.692  INFO [org.apache.flink.runtime.minicluster.MiniCluster:324] Starting Flink Mini Cluster 
+2025-02-17 16:21:35.637  INFO [org.apache.flink.runtime.minicluster.MiniCluster:343] Starting Metrics Registry 
+2025-02-17 16:21:35.802  INFO [org.apache.flink.runtime.metrics.MetricRegistryImpl:177] No metrics reporter configured, no metrics will be exposed/reported. 
+2025-02-17 16:21:35.803  INFO [org.apache.flink.runtime.metrics.MetricRegistryImpl:240] No trace reporter configured, no metrics will be exposed/reported. 
+2025-02-17 16:21:35.803  INFO [org.apache.flink.runtime.minicluster.MiniCluster:350] Starting RPC Service(s) 
+2025-02-17 16:21:35.871  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:225] Trying to start local actor system 
+2025-02-17 16:21:37.694  INFO [org.apache.pekko.event.slf4j.Slf4jLogger:117] Slf4jLogger started 
+2025-02-17 16:21:38.030  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:255] Actor system started at pekko://flink 
+2025-02-17 16:21:38.130  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:225] Trying to start local actor system 
+2025-02-17 16:21:38.206  INFO [org.apache.pekko.event.slf4j.Slf4jLogger:117] Slf4jLogger started 
+2025-02-17 16:21:38.244  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:255] Actor system started at pekko://flink-metrics 
+2025-02-17 16:21:38.302  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:273] Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService . 
+2025-02-17 16:21:38.383  WARN [org.apache.flink.runtime.rpc.pekko.SupervisorActor:144] RpcActor pekko://flink-metrics/user/rpc/MetricQueryService has failed. Shutting it down now. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2025-02-17 16:21:38.401  INFO [org.apache.pekko.actor.CoordinatedShutdown:108] Running CoordinatedShutdown with reason [ActorSystemTerminateReason] 
+2025-02-17 16:21:38.417  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcActor:149] The RpcEndpoint MetricQueryService failed. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2025-02-17 16:21:38.513  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:127] Loading delegation token providers 
+2025-02-17 16:21:38.558  INFO [org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider:78] Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration". 
+2025-02-17 16:21:38.559  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:135] Delegation token provider hadoopfs loaded and initialized 
+2025-02-17 16:21:38.582  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:135] Delegation token provider hbase loaded and initialized 
+2025-02-17 16:21:38.583  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:165] Delegation token providers loaded successfully 
+2025-02-17 16:21:38.589  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:64] Loading delegation token receivers 
+2025-02-17 16:21:38.626  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hadoopfs loaded and initialized 
+2025-02-17 16:21:38.632  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hbase loaded and initialized 
+2025-02-17 16:21:38.633  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:101] Delegation token receivers loaded successfully 
+2025-02-17 16:21:38.634  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:189] Checking provider and receiver instances consistency 
+2025-02-17 16:21:38.635  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:209] Provider and receiver instances are consistent 
+2025-02-17 16:21:38.636  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:240] Obtaining delegation tokens 
+2025-02-17 16:21:38.649  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:243] Delegation tokens obtained successfully 
+2025-02-17 16:21:38.650  WARN [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:248] No tokens obtained so skipping notifications 
+2025-02-17 16:21:38.651  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:64] Loading delegation token receivers 
+2025-02-17 16:21:38.660  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hadoopfs loaded and initialized 
+2025-02-17 16:21:38.661  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hbase loaded and initialized 
+2025-02-17 16:21:38.661  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:101] Delegation token receivers loaded successfully 
+2025-02-17 16:21:38.812  INFO [org.apache.flink.runtime.blob.BlobServer:164] Created BLOB server storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_c84b8675ecec431cd475a3be2eafac3e\blobStorage 
+2025-02-17 16:21:38.855  INFO [org.apache.flink.runtime.blob.BlobServer:238] Started BLOB server at 0.0.0.0:55033 - max concurrent requests: 50 - max backlog: 1000 
+2025-02-17 16:21:38.911  INFO [org.apache.flink.runtime.blob.PermanentBlobCache:93] Created BLOB cache storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_c84b8675ecec431cd475a3be2eafac3e\blobStorage 
+2025-02-17 16:21:38.921  INFO [org.apache.flink.runtime.blob.TransientBlobCache:93] Created BLOB cache storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_c84b8675ecec431cd475a3be2eafac3e\blobStorage 
+2025-02-17 16:21:38.924  INFO [org.apache.flink.runtime.minicluster.MiniCluster:745] Starting 1 TaskManager(s) 
+2025-02-17 16:21:38.964  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerRunner:609] Starting TaskManager with ResourceID: 47fd3a5e-ae27-4253-b1dc-9154797944e2 
+2025-02-17 16:21:39.219  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerServices:553] Temporary file directory 'C:\Users\w7178930\AppData\Local\Temp': total 471 GB, usable 240 GB (50,96% usable) 
+2025-02-17 16:21:39.272  INFO [org.apache.flink.runtime.io.disk.iomanager.IOManager:63] Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	C:\Users\w7178930\AppData\Local\Temp\flink-io-bb2d5fe1-f377-464d-9c45-ea8325bebc5a 
+2025-02-17 16:21:39.395  INFO [org.apache.flink.runtime.io.network.NettyShuffleServiceFactory:170] Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	C:\Users\w7178930\AppData\Local\Temp\flink-netty-shuffle-892821fe-5efc-42ef-af51-1c966ab646ea 
+2025-02-17 16:21:39.525  INFO [org.apache.flink.runtime.io.network.buffer.NetworkBufferPool:156] Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768). 
+2025-02-17 16:21:39.663  INFO [org.apache.flink.runtime.io.network.NettyShuffleEnvironment:362] Starting the network environment and its components. 
+2025-02-17 16:21:39.664  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerServices:353] TaskManager data connection initialized successfully; listening internally on port: -1 
+2025-02-17 16:21:39.680  INFO [org.apache.flink.runtime.taskexecutor.KvStateService:92] Starting the kvState service and its components. 
+2025-02-17 16:21:40.154  INFO [org.apache.flink.configuration.Configuration:985] Config uses fallback configuration key 'pekko.ask.timeout' instead of key 'taskmanager.slot.timeout' 
+2025-02-17 16:21:40.318  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:273] Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 . 
+2025-02-17 16:21:40.486  INFO [org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService:127] Start job leader service. 
+2025-02-17 16:21:40.488  INFO [org.apache.flink.runtime.filecache.FileCache:116] User file cache uses directory C:\Users\w7178930\AppData\Local\Temp\flink-dist-cache-480e15e4-fb39-44a8-bd3a-f55f2aca3826 
+2025-02-17 16:21:40.490  WARN [org.apache.flink.runtime.rpc.pekko.SupervisorActor:144] RpcActor pekko://flink/user/rpc/taskmanager_0 has failed. Shutting it down now. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+2025-02-17 16:21:40.496  INFO [org.apache.pekko.actor.CoordinatedShutdown:108] Running CoordinatedShutdown with reason [ActorSystemTerminateReason] 
+2025-02-17 16:21:40.497  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcActor:149] The RpcEndpoint taskmanager_0 failed. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+2025-02-17 16:21:41.392  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:182] Starting rest endpoint. 
+2025-02-17 16:21:41.414  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:124] Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath. 
+2025-02-17 16:21:46.670  WARN [org.apache.flink.runtime.webmonitor.WebMonitorUtils:76] Log file environment variable 'log.file' is not set. 
+2025-02-17 16:21:46.671  WARN [org.apache.flink.runtime.webmonitor.WebMonitorUtils:82] JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'. 
+2025-02-17 16:21:49.614  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:308] Rest endpoint listening at localhost:55185 
+2025-02-17 16:21:49.618  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'rest_server'. 
+2025-02-17 16:21:49.638  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1212] http://localhost:55185 was granted leadership with leaderSessionID=8dd65a84-b150-44ce-b8c7-b31f3eb04b06 
+2025-02-17 16:21:49.639  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:261] Received confirmation of leadership for leader http://localhost:55185 , session=8dd65a84-b150-44ce-b8c7-b31f3eb04b06 
+2025-02-17 16:21:49.819  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'dispatcher'. 
+2025-02-17 16:21:49.820  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:118] Starting resource manager service. 
+2025-02-17 16:21:49.821  INFO [org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner:114] DefaultDispatcherRunner was granted leadership with leader id f5fad6fd-9093-4841-98bd-2a29fe5aa50e. Creating new DispatcherLeaderProcess. 
+2025-02-17 16:21:49.822  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'resource_manager'. 
+2025-02-17 16:21:49.826  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:198] Resource manager service is granted leadership with session id 371facf1-d0e4-4e22-970f-80c7cec6474e. 
+2025-02-17 16:21:49.834  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:99] Start SessionDispatcherLeaderProcess. 
+2025-02-17 16:21:49.841  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:144] Recover all persisted job graphs that are not finished, yet. 
+2025-02-17 16:21:49.842  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:158] Successfully recovered 0 persisted job graphs. 
+2025-02-17 16:21:49.863  WARN [org.apache.flink.runtime.minicluster.MiniCluster:1510] Error in MiniCluster. Shutting the MiniCluster down. org.apache.flink.util.FlinkException: Cannot start resource manager.
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.lambda$grantLeadership$2(ResourceManagerServiceImpl.java:205)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.CompletionException: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#-1956400915]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:670)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:658)
+	at java.base/java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:2099)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:35)
+	at org.apache.flink.runtime.rpc.pekko.SupervisorActor.startRpcActor(SupervisorActor.java:205)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.registerRpcActor(PekkoRpcService.java:354)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.startServer(PekkoRpcService.java:268)
+	at org.apache.flink.runtime.rpc.RpcEndpoint.<init>(RpcEndpoint.java:147)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:44)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:53)
+	at org.apache.flink.runtime.resourcemanager.ResourceManager.<init>(ResourceManager.java:195)
+	at org.apache.flink.runtime.resourcemanager.StandaloneResourceManager.<init>(StandaloneResourceManager.java:73)
+	at org.apache.flink.runtime.resourcemanager.StandaloneResourceManagerFactory.createResourceManager(StandaloneResourceManagerFactory.java:92)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerFactory.createResourceManager(ResourceManagerFactory.java:103)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.startNewLeaderResourceManager(ResourceManagerServiceImpl.java:254)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.lambda$grantLeadership$2(ResourceManagerServiceImpl.java:203)
+	... 3 common frames omitted
+Caused by: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#-1956400915]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+
+2025-02-17 16:21:49.864  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:136] Stopping SessionDispatcherLeaderProcess. 
+2025-02-17 16:21:49.867  WARN [org.apache.flink.runtime.minicluster.MiniCluster:1510] Error in MiniCluster. Shutting the MiniCluster down. java.util.concurrent.CompletionException: org.apache.flink.util.FlinkRuntimeException: Could not create the Dispatcher rpc endpoint.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture.biAccept(CompletableFuture.java:1314)
+	at java.base/java.util.concurrent.CompletableFuture$BiAccept.tryFire(CompletableFuture.java:1280)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:649)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.flink.util.FlinkRuntimeException: Could not create the Dispatcher rpc endpoint.
+	at org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherGatewayServiceFactory.create(DefaultDispatcherGatewayServiceFactory.java:76)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.createDispatcher(SessionDispatcherLeaderProcess.java:111)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.lambda$createDispatcherIfRunning$0(SessionDispatcherLeaderProcess.java:104)
+	at org.apache.flink.runtime.dispatcher.runner.AbstractDispatcherLeaderProcess.runIfState(AbstractDispatcherLeaderProcess.java:222)
+	at org.apache.flink.runtime.dispatcher.runner.AbstractDispatcherLeaderProcess.runIfStateIs(AbstractDispatcherLeaderProcess.java:212)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.createDispatcherIfRunning(SessionDispatcherLeaderProcess.java:104)
+	at java.base/java.util.concurrent.CompletableFuture.biAccept(CompletableFuture.java:1311)
+	... 8 common frames omitted
+Caused by: java.util.concurrent.CompletionException: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#-1956400915]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:670)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:658)
+	at java.base/java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:2099)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:35)
+	at org.apache.flink.runtime.rpc.pekko.SupervisorActor.startRpcActor(SupervisorActor.java:205)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.registerRpcActor(PekkoRpcService.java:354)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.startServer(PekkoRpcService.java:268)
+	at org.apache.flink.runtime.rpc.RpcEndpoint.<init>(RpcEndpoint.java:147)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:44)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:53)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:269)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:247)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:228)
+	at org.apache.flink.runtime.dispatcher.StandaloneDispatcher.<init>(StandaloneDispatcher.java:42)
+	at org.apache.flink.runtime.dispatcher.SessionDispatcherFactory.createDispatcher(SessionDispatcherFactory.java:49)
+	at org.apache.flink.runtime.dispatcher.SessionDispatcherFactory.createDispatcher(SessionDispatcherFactory.java:29)
+	at org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherGatewayServiceFactory.create(DefaultDispatcherGatewayServiceFactory.java:66)
+	... 14 common frames omitted
+Caused by: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#-1956400915]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+
+2025-02-17 16:21:49.871  INFO [org.apache.flink.runtime.minicluster.MiniCluster:510] Flink Mini Cluster started successfully 
+2025-02-17 16:21:49.872  INFO [org.apache.flink.runtime.minicluster.MiniCluster:664] Shutting down Flink Mini Cluster 
+2025-02-17 16:21:49.886  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:378] Shutting down rest endpoint. 
+2025-02-17 16:21:49.916  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1186] Removing cache directory C:\Users\w7178930\AppData\Local\Temp\flink-web-ui 
+2025-02-17 16:21:49.918  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1221] http://localhost:55185 lost leadership 
+2025-02-17 16:21:49.919  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:386] Shut down complete. 
+2025-02-17 16:21:49.921  WARN [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:158] Cannot deregister application. Resource manager service is not available. 
+2025-02-17 16:21:49.922  INFO [org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent:165] Closing components. 
+2025-02-17 16:21:49.923  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:166] Stopping resource manager service. 
+2025-02-17 16:21:49.924  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:218] Resource manager service is not running. Ignore revoking leadership. 
+2025-02-17 16:21:49.932  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:417] Stopping Pekko RPC service. 
+2025-02-17 16:21:49.939  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:438] Stopped Pekko RPC service. 
+2025-02-17 16:21:49.941  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:417] Stopping Pekko RPC service. 
+2025-02-17 16:21:49.942  INFO [org.apache.flink.runtime.blob.PermanentBlobCache:251] Shutting down BLOB cache 
+2025-02-17 16:21:49.946  INFO [org.apache.flink.runtime.blob.TransientBlobCache:251] Shutting down BLOB cache 
+2025-02-17 16:21:49.949  INFO [org.apache.flink.runtime.blob.BlobServer:397] Stopped BLOB server at 0.0.0.0:55033 
+2025-02-17 16:21:49.957  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:438] Stopped Pekko RPC service. 
+2025-02-17 16:22:30.607  INFO [za.co.woolworths.itemkafka_poc.service.FlinkJobService:88] Job simpleJob is now FAILED 
+2025-02-17 16:22:30.612 ERROR [za.co.woolworths.itemkafka_poc.service.FlinkJobService:80] Simple Job execution failed: MiniCluster is not yet running or has already been shut down. 
+2025-02-17 16:22:30.616 ERROR [za.co.woolworths.itemkafka_poc.controller.FlinkJobController:73] Error starting Simple Job: MiniCluster is not yet running or has already been shut down. 
+2025-02-17 16:29:47.489  INFO [org.apache.kafka.clients.NetworkClient:977] [Consumer clientId=consumer-item_group-2, groupId=item_group] Node -1 disconnected. 
+2025-02-17 16:29:47.489  INFO [org.apache.kafka.clients.NetworkClient:977] [Consumer clientId=consumer-item_group-3, groupId=item_group] Node -1 disconnected. 
+2025-02-17 16:29:47.535  INFO [org.apache.kafka.clients.NetworkClient:977] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-02-17 16:30:53.109  INFO [org.apache.flink.runtime.state.TaskExecutorFileMergingManager:216] Shutting down TaskExecutorFileMergingManager. 
+2025-02-17 16:30:53.110  INFO [org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager:234] Shutting down TaskExecutorStateChangelogStoragesManager. 
+2025-02-17 16:30:53.110  INFO [org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager:319] Shutting down TaskExecutorLocalStateStoresManager. 
+2025-02-17 16:30:53.111  INFO [org.apache.flink.runtime.filecache.FileCache:160] removed file cache directory C:\Users\w7178930\AppData\Local\Temp\flink-dist-cache-480e15e4-fb39-44a8-bd3a-f55f2aca3826 
+2025-02-17 16:30:53.112  INFO [org.apache.flink.runtime.io.disk.FileChannelManagerImpl:149] FileChannelManager removed spill file directory C:\Users\w7178930\AppData\Local\Temp\flink-io-bb2d5fe1-f377-464d-9c45-ea8325bebc5a 
+2025-02-17 16:30:53.113  INFO [org.apache.flink.runtime.io.disk.FileChannelManagerImpl:149] FileChannelManager removed spill file directory C:\Users\w7178930\AppData\Local\Temp\flink-netty-shuffle-892821fe-5efc-42ef-af51-1c966ab646ea 
+2025-02-17 16:30:53.618  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:338] [Consumer clientId=consumer-item_group-1, groupId=item_group] Revoke previously assigned partitions Item_Topic-0 
+2025-02-17 16:30:53.618  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-3, groupId=item_group] Member consumer-item_group-3-eae40ea3-63c8-4ad9-a641-e31479b1eb5c sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:30:53.618  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-2, groupId=item_group] Member consumer-item_group-2-f2b44920-4946-4c6a-a6e7-5a03014bc1c1 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:30:53.618  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-1, groupId=item_group] Member consumer-item_group-1-65cdfb1c-fed3-4312-8006-6202c36b799d sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-3, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.619  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-2, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:30:53.620  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.621  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:30:53.629  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:30:53.629  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:30:53.630  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:30:53.632  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-3 unregistered 
+2025-02-17 16:30:53.633  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:30:53.634  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:30:53.634  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:30:53.635  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:30:53.638  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-2 unregistered 
+2025-02-17 16:30:53.639  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:30:54.033  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:30:54.034  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:30:54.035  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:30:54.041  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-02-17 16:30:54.042  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:30:54.053  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-17 16:30:54.058  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-02-17 16:30:54.063  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 
+2025-02-17 16:34:10.198  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:55] Starting KafkaItemProducerPocApplication using Java 11.0.2 on W49204302 with PID 5208 (C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC\target\classes started by W7178930 in C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC) 
+2025-02-17 16:34:10.200  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:640] The following 2 profiles are active: "swagger", "dev" 
+2025-02-17 16:34:11.048  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-02-17 16:34:11.127  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces. 
+2025-02-17 16:34:12.387  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http) 
+2025-02-17 16:34:12.395  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8081"] 
+2025-02-17 16:34:12.396  INFO [org.apache.catalina.core.StandardService:173] Starting service [Tomcat] 
+2025-02-17 16:34:12.396  INFO [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2025-02-17 16:34:12.578  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext 
+2025-02-17 16:34:12.579  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2339 ms 
+2025-02-17 16:34:13.152  INFO [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting... 
+2025-02-17 16:34:13.889  INFO [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed. 
+2025-02-17 16:34:13.956  INFO [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-02-17 16:34:14.031  INFO [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final 
+2025-02-17 16:34:14.298  INFO [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2025-02-17 16:34:14.541  INFO [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect 
+2025-02-17 16:34:15.371  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2025-02-17 16:34:15.384  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-17 16:34:16.514  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2025-02-17 16:34:16.678 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:367] 15 mappings in 'requestMappingHandlerMapping' 
+2025-02-17 16:34:17.421 DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:188] Patterns [/agent/swagger-ui*/**] in 'resourceHandlerMapping' 
+2025-02-17 16:34:17.501 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:625] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice 
+2025-02-17 16:34:17.568 DEBUG [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:307] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice 
+2025-02-17 16:34:18.182  INFO [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] Exposing 1 endpoint(s) beneath base path '/actuator' 
+2025-02-17 16:34:18.567  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:34:19.071  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:34:19.072  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:34:19.073  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802859067 
+2025-02-17 16:34:19.083  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-1, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:34:19.117  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:34:19.137  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:34:19.139  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:34:19.140  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802859137 
+2025-02-17 16:34:19.141  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-2, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:34:19.149  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:369] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-02-17 16:34:19.167  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.5.1 
+2025-02-17 16:34:19.168  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 2c6fb6c54472e90a 
+2025-02-17 16:34:19.169  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1739802859167 
+2025-02-17 16:34:19.170  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:980] [Consumer clientId=consumer-item_group-3, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-02-17 16:34:19.174  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8081"] 
+2025-02-17 16:34:19.202  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path '' 
+2025-02-17 16:34:19.235  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:61] Started KafkaItemProducerPocApplication in 9.513 seconds (JVM running for 10.011) 
+2025-02-17 16:34:19.919  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-3, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:34:19.919  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-1, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:34:19.920  INFO [org.apache.kafka.clients.Metadata:287] [Consumer clientId=consumer-item_group-2, groupId=item_group] Cluster ID: 241EXJnpTO6SXdisTDqE6g 
+2025-02-17 16:34:19.923  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-2, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:34:19.923  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-3, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:34:19.923  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:906] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) 
+2025-02-17 16:34:19.927  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.928  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.928  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.965  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1 
+2025-02-17 16:34:19.967  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:34:19.968  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.971  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-2-a40252b8-e529-400a-ada1-ddf038dd8883 
+2025-02-17 16:34:19.972  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:34:19.973  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-2, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.973  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: need to re-join with the given member-id: consumer-item_group-3-b6961f9c-345b-475a-9efa-5242a3d346d9 
+2025-02-17 16:34:19.975  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+2025-02-17 16:34:19.976  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-3, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:19.977  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=81, memberId='consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1', protocol='range'} 
+2025-02-17 16:34:19.986  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:712] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 81: {consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1=Assignment(partitions=[Item_Topic-0])} 
+2025-02-17 16:34:19.996  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:836] [Consumer clientId=consumer-item_group-1, groupId=item_group] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=81, memberId='consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1', protocol='range'} 
+2025-02-17 16:34:19.997  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException) 
+2025-02-17 16:34:19.998  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:576] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-02-17 16:34:20.001  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully joined group with generation Generation{generationId=82, memberId='consumer-item_group-2-a40252b8-e529-400a-ada1-ddf038dd8883', protocol='range'} 
+2025-02-17 16:34:20.001  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully joined group with generation Generation{generationId=82, memberId='consumer-item_group-3-b6961f9c-345b-475a-9efa-5242a3d346d9', protocol='range'} 
+2025-02-17 16:34:20.002  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:637] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=82, memberId='consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1', protocol='range'} 
+2025-02-17 16:34:20.005  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:712] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 82: {consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1=Assignment(partitions=[Item_Topic-0]), consumer-item_group-3-b6961f9c-345b-475a-9efa-5242a3d346d9=Assignment(partitions=[]), consumer-item_group-2-a40252b8-e529-400a-ada1-ddf038dd8883=Assignment(partitions=[])} 
+2025-02-17 16:34:20.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-2, groupId=item_group] Successfully synced group in generation Generation{generationId=82, memberId='consumer-item_group-2-a40252b8-e529-400a-ada1-ddf038dd8883', protocol='range'} 
+2025-02-17 16:34:20.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-3, groupId=item_group] Successfully synced group in generation Generation{generationId=82, memberId='consumer-item_group-3-b6961f9c-345b-475a-9efa-5242a3d346d9', protocol='range'} 
+2025-02-17 16:34:20.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:812] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully synced group in generation Generation{generationId=82, memberId='consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1', protocol='range'} 
+2025-02-17 16:34:20.011  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-2, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-17 16:34:20.011  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-3, groupId=item_group] Notifying assignor about the new Assignment(partitions=[]) 
+2025-02-17 16:34:20.012  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-2, groupId=item_group] Adding newly assigned partitions:  
+2025-02-17 16:34:20.012  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307] [Consumer clientId=consumer-item_group-1, groupId=item_group] Notifying assignor about the new Assignment(partitions=[Item_Topic-0]) 
+2025-02-17 16:34:20.012  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-3, groupId=item_group] Adding newly assigned partitions:  
+2025-02-17 16:34:20.014  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-17 16:34:20.014  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [] 
+2025-02-17 16:34:20.015  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:319] [Consumer clientId=consumer-item_group-1, groupId=item_group] Adding newly assigned partitions: Item_Topic-0 
+2025-02-17 16:34:20.031  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:975] [Consumer clientId=consumer-item_group-1, groupId=item_group] Setting offset for partition Item_Topic-0 to the committed offset FetchPosition{offset=100, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[W49204302.woolworths.co.za:9092 (id: 0 rack: null)], epoch=0}} 
+2025-02-17 16:34:20.032  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [Item_Topic-0] 
+2025-02-17 16:34:25.519  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-02-17 16:34:25.520  INFO [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet' 
+2025-02-17 16:34:25.520 DEBUG [org.springframework.web.servlet.DispatcherServlet:520] Detected StandardServletMultipartResolver 
+2025-02-17 16:34:25.521 DEBUG [org.springframework.web.servlet.DispatcherServlet:544] Detected AcceptHeaderLocaleResolver 
+2025-02-17 16:34:25.521 DEBUG [org.springframework.web.servlet.DispatcherServlet:569] Detected FixedThemeResolver 
+2025-02-17 16:34:25.523 DEBUG [org.springframework.web.servlet.DispatcherServlet:719] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5bdef8ee 
+2025-02-17 16:34:25.525 DEBUG [org.springframework.web.servlet.DispatcherServlet:783] Detected org.springframework.web.servlet.support.SessionFlashMapManager@2fda92e0 
+2025-02-17 16:34:25.525 DEBUG [org.springframework.web.servlet.DispatcherServlet:542] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data 
+2025-02-17 16:34:25.526  INFO [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 6 ms 
+2025-02-17 16:34:25.545 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/flink/start-simple-job", parameters={} 
+2025-02-17 16:34:25.553 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.FlinkJobController#triggerFlinkSimpleJob() 
+2025-02-17 16:34:45.981  INFO [za.co.woolworths.itemkafka_poc.service.FlinkJobService:88] Job simpleJob is now RUNNING 
+2025-02-17 16:34:46.404  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:34:46.405  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:34:46.405  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value. 
+2025-02-17 16:34:46.406  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb. 
+2025-02-17 16:34:46.406  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb. 
+2025-02-17 16:34:46.406  INFO [org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils:274] The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb. 
+2025-02-17 16:34:46.408  INFO [org.apache.flink.runtime.minicluster.MiniCluster:324] Starting Flink Mini Cluster 
+2025-02-17 16:34:46.893  INFO [org.apache.flink.runtime.minicluster.MiniCluster:343] Starting Metrics Registry 
+2025-02-17 16:34:46.927  INFO [org.apache.flink.runtime.metrics.MetricRegistryImpl:177] No metrics reporter configured, no metrics will be exposed/reported. 
+2025-02-17 16:34:46.928  INFO [org.apache.flink.runtime.metrics.MetricRegistryImpl:240] No trace reporter configured, no metrics will be exposed/reported. 
+2025-02-17 16:34:46.928  INFO [org.apache.flink.runtime.minicluster.MiniCluster:350] Starting RPC Service(s) 
+2025-02-17 16:34:46.939  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:225] Trying to start local actor system 
+2025-02-17 16:34:47.429  INFO [org.apache.pekko.event.slf4j.Slf4jLogger:117] Slf4jLogger started 
+2025-02-17 16:34:47.510  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:255] Actor system started at pekko://flink 
+2025-02-17 16:34:47.521  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:225] Trying to start local actor system 
+2025-02-17 16:34:47.530  INFO [org.apache.pekko.event.slf4j.Slf4jLogger:117] Slf4jLogger started 
+2025-02-17 16:34:47.535  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils:255] Actor system started at pekko://flink-metrics 
+2025-02-17 16:34:47.546  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:273] Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService . 
+2025-02-17 16:34:47.563  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:127] Loading delegation token providers 
+2025-02-17 16:34:47.563  WARN [org.apache.flink.runtime.rpc.pekko.SupervisorActor:144] RpcActor pekko://flink-metrics/user/rpc/MetricQueryService has failed. Shutting it down now. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2025-02-17 16:34:47.567  INFO [org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider:78] Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration". 
+2025-02-17 16:34:47.567  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:135] Delegation token provider hadoopfs loaded and initialized 
+2025-02-17 16:34:47.569  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:135] Delegation token provider hbase loaded and initialized 
+2025-02-17 16:34:47.569  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:165] Delegation token providers loaded successfully 
+2025-02-17 16:34:47.570  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:64] Loading delegation token receivers 
+2025-02-17 16:34:47.571  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hadoopfs loaded and initialized 
+2025-02-17 16:34:47.572  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hbase loaded and initialized 
+2025-02-17 16:34:47.572  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:101] Delegation token receivers loaded successfully 
+2025-02-17 16:34:47.572  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:189] Checking provider and receiver instances consistency 
+2025-02-17 16:34:47.572  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:209] Provider and receiver instances are consistent 
+2025-02-17 16:34:47.573  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:240] Obtaining delegation tokens 
+2025-02-17 16:34:47.574  INFO [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:243] Delegation tokens obtained successfully 
+2025-02-17 16:34:47.574  WARN [org.apache.flink.runtime.security.token.DefaultDelegationTokenManager:248] No tokens obtained so skipping notifications 
+2025-02-17 16:34:47.574  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:64] Loading delegation token receivers 
+2025-02-17 16:34:47.575  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hadoopfs loaded and initialized 
+2025-02-17 16:34:47.576  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:72] Delegation token receiver hbase loaded and initialized 
+2025-02-17 16:34:47.576  INFO [org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository:101] Delegation token receivers loaded successfully 
+2025-02-17 16:34:47.579  INFO [org.apache.pekko.actor.CoordinatedShutdown:108] Running CoordinatedShutdown with reason [ActorSystemTerminateReason] 
+2025-02-17 16:34:47.592  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcActor:149] The RpcEndpoint MetricQueryService failed. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2025-02-17 16:34:47.593  INFO [org.apache.flink.runtime.blob.BlobServer:164] Created BLOB server storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_3aedac84d0f06a091a39c54352f6565b\blobStorage 
+2025-02-17 16:34:47.597  INFO [org.apache.flink.runtime.blob.BlobServer:238] Started BLOB server at 0.0.0.0:55488 - max concurrent requests: 50 - max backlog: 1000 
+2025-02-17 16:34:47.616  INFO [org.apache.flink.runtime.blob.PermanentBlobCache:93] Created BLOB cache storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_3aedac84d0f06a091a39c54352f6565b\blobStorage 
+2025-02-17 16:34:47.619  INFO [org.apache.flink.runtime.blob.TransientBlobCache:93] Created BLOB cache storage directory C:\Users\w7178930\AppData\Local\Temp\minicluster_3aedac84d0f06a091a39c54352f6565b\blobStorage 
+2025-02-17 16:34:47.620  INFO [org.apache.flink.runtime.minicluster.MiniCluster:745] Starting 1 TaskManager(s) 
+2025-02-17 16:34:47.626  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerRunner:609] Starting TaskManager with ResourceID: 32403ae9-628c-4b12-95ff-82e5d6444c2c 
+2025-02-17 16:34:47.656  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerServices:553] Temporary file directory 'C:\Users\w7178930\AppData\Local\Temp': total 471 GB, usable 240 GB (50,96% usable) 
+2025-02-17 16:34:47.661  INFO [org.apache.flink.runtime.io.disk.iomanager.IOManager:63] Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	C:\Users\w7178930\AppData\Local\Temp\flink-io-e269dd96-90ca-4527-b4fc-a9a87df16ccb 
+2025-02-17 16:34:47.673  INFO [org.apache.flink.runtime.io.network.NettyShuffleServiceFactory:170] Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	C:\Users\w7178930\AppData\Local\Temp\flink-netty-shuffle-989849f3-7b47-4a5c-8236-4e2f66e5fb7f 
+2025-02-17 16:34:47.703  INFO [org.apache.flink.runtime.io.network.buffer.NetworkBufferPool:156] Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768). 
+2025-02-17 16:34:47.715  INFO [org.apache.flink.runtime.io.network.NettyShuffleEnvironment:362] Starting the network environment and its components. 
+2025-02-17 16:34:47.715  INFO [org.apache.flink.runtime.taskexecutor.TaskManagerServices:353] TaskManager data connection initialized successfully; listening internally on port: -1 
+2025-02-17 16:34:47.716  INFO [org.apache.flink.runtime.taskexecutor.KvStateService:92] Starting the kvState service and its components. 
+2025-02-17 16:34:47.748  INFO [org.apache.flink.configuration.Configuration:985] Config uses fallback configuration key 'pekko.ask.timeout' instead of key 'taskmanager.slot.timeout' 
+2025-02-17 16:34:47.763  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:273] Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 . 
+2025-02-17 16:34:47.777  INFO [org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService:127] Start job leader service. 
+2025-02-17 16:34:47.778  INFO [org.apache.flink.runtime.filecache.FileCache:116] User file cache uses directory C:\Users\w7178930\AppData\Local\Temp\flink-dist-cache-449f6467-530d-4af9-bdcf-a2725ffa753b 
+2025-02-17 16:34:47.781  WARN [org.apache.flink.runtime.rpc.pekko.SupervisorActor:144] RpcActor pekko://flink/user/rpc/taskmanager_0 has failed. Shutting it down now. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+2025-02-17 16:34:47.784  INFO [org.apache.pekko.actor.CoordinatedShutdown:108] Running CoordinatedShutdown with reason [ActorSystemTerminateReason] 
+2025-02-17 16:34:47.785  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcActor:149] The RpcEndpoint taskmanager_0 failed. java.lang.NullPointerException: null
+	at java.base/java.util.HashMap.putMapEntries(HashMap.java:496)
+	at java.base/java.util.HashMap.putAll(HashMap.java:780)
+	at java.base/java.util.Collections$SynchronizedMap.putAll(Collections.java:2602)
+	at ch.qos.logback.classic.util.LogbackMDCAdapter.setContextMap(LogbackMDCAdapter.java:197)
+	at org.slf4j.MDC.setContextMap(MDC.java:264)
+	at org.apache.flink.util.MdcUtils.lambda$withContext$0(MdcUtils.java:48)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcActor.handleControlMessage(PekkoRpcActor.java:208)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:33)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:29)
+	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+	at org.apache.pekko.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:29)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.actor.AbstractActor.aroundReceive(AbstractActor.scala:229)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:280)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:241)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:253)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+2025-02-17 16:34:47.836  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:182] Starting rest endpoint. 
+2025-02-17 16:34:47.839  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:124] Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath. 
+2025-02-17 16:34:48.053  WARN [org.apache.flink.runtime.webmonitor.WebMonitorUtils:76] Log file environment variable 'log.file' is not set. 
+2025-02-17 16:34:48.053  WARN [org.apache.flink.runtime.webmonitor.WebMonitorUtils:82] JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'. 
+2025-02-17 16:34:48.646  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:308] Rest endpoint listening at localhost:55542 
+2025-02-17 16:34:48.647  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'rest_server'. 
+2025-02-17 16:34:48.649  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1212] http://localhost:55542 was granted leadership with leaderSessionID=b10c2be5-6415-49d4-bb13-ede508c0be90 
+2025-02-17 16:34:48.649  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:261] Received confirmation of leadership for leader http://localhost:55542 , session=b10c2be5-6415-49d4-bb13-ede508c0be90 
+2025-02-17 16:34:48.658  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'dispatcher'. 
+2025-02-17 16:34:48.659  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:118] Starting resource manager service. 
+2025-02-17 16:34:48.659  INFO [org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService:314] Proposing leadership to the contender that is registered under component ID 'resource_manager'. 
+2025-02-17 16:34:48.660  INFO [org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner:114] DefaultDispatcherRunner was granted leadership with leader id c7043c2d-fd20-42a4-b646-de74ff32348f. Creating new DispatcherLeaderProcess. 
+2025-02-17 16:34:48.661  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:198] Resource manager service is granted leadership with session id 2f278edc-fca3-45a5-b0cd-fb81b1662aa6. 
+2025-02-17 16:34:48.664  INFO [org.apache.flink.runtime.minicluster.MiniCluster:510] Flink Mini Cluster started successfully 
+2025-02-17 16:34:48.669  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:99] Start SessionDispatcherLeaderProcess. 
+2025-02-17 16:34:48.674  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:144] Recover all persisted job graphs that are not finished, yet. 
+2025-02-17 16:34:48.674  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:158] Successfully recovered 0 persisted job graphs. 
+2025-02-17 16:34:48.687  WARN [org.apache.flink.runtime.minicluster.MiniCluster:1510] Error in MiniCluster. Shutting the MiniCluster down. org.apache.flink.util.FlinkException: Cannot start resource manager.
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.lambda$grantLeadership$2(ResourceManagerServiceImpl.java:205)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.CompletionException: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#771243563]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:670)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:658)
+	at java.base/java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:2099)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:35)
+	at org.apache.flink.runtime.rpc.pekko.SupervisorActor.startRpcActor(SupervisorActor.java:205)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.registerRpcActor(PekkoRpcService.java:354)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.startServer(PekkoRpcService.java:268)
+	at org.apache.flink.runtime.rpc.RpcEndpoint.<init>(RpcEndpoint.java:147)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:44)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:53)
+	at org.apache.flink.runtime.resourcemanager.ResourceManager.<init>(ResourceManager.java:195)
+	at org.apache.flink.runtime.resourcemanager.StandaloneResourceManager.<init>(StandaloneResourceManager.java:73)
+	at org.apache.flink.runtime.resourcemanager.StandaloneResourceManagerFactory.createResourceManager(StandaloneResourceManagerFactory.java:92)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerFactory.createResourceManager(ResourceManagerFactory.java:103)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.startNewLeaderResourceManager(ResourceManagerServiceImpl.java:254)
+	at org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl.lambda$grantLeadership$2(ResourceManagerServiceImpl.java:203)
+	... 3 common frames omitted
+Caused by: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#771243563]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+
+2025-02-17 16:34:48.688  INFO [org.apache.flink.runtime.minicluster.MiniCluster:664] Shutting down Flink Mini Cluster 
+2025-02-17 16:34:48.690  INFO [org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess:136] Stopping SessionDispatcherLeaderProcess. 
+2025-02-17 16:34:48.691  WARN [org.apache.flink.runtime.minicluster.MiniCluster:1510] Error in MiniCluster. Shutting the MiniCluster down. java.util.concurrent.CompletionException: org.apache.flink.util.FlinkRuntimeException: Could not create the Dispatcher rpc endpoint.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture.biAccept(CompletableFuture.java:1314)
+	at java.base/java.util.concurrent.CompletableFuture$BiAccept.tryFire(CompletableFuture.java:1280)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:610)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:649)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:478)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.flink.util.FlinkRuntimeException: Could not create the Dispatcher rpc endpoint.
+	at org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherGatewayServiceFactory.create(DefaultDispatcherGatewayServiceFactory.java:76)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.createDispatcher(SessionDispatcherLeaderProcess.java:111)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.lambda$createDispatcherIfRunning$0(SessionDispatcherLeaderProcess.java:104)
+	at org.apache.flink.runtime.dispatcher.runner.AbstractDispatcherLeaderProcess.runIfState(AbstractDispatcherLeaderProcess.java:222)
+	at org.apache.flink.runtime.dispatcher.runner.AbstractDispatcherLeaderProcess.runIfStateIs(AbstractDispatcherLeaderProcess.java:212)
+	at org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess.createDispatcherIfRunning(SessionDispatcherLeaderProcess.java:104)
+	at java.base/java.util.concurrent.CompletableFuture.biAccept(CompletableFuture.java:1311)
+	... 8 common frames omitted
+Caused by: java.util.concurrent.CompletionException: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#771243563]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:670)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:658)
+	at java.base/java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:2099)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:35)
+	at org.apache.flink.runtime.rpc.pekko.SupervisorActor.startRpcActor(SupervisorActor.java:205)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.registerRpcActor(PekkoRpcService.java:354)
+	at org.apache.flink.runtime.rpc.pekko.PekkoRpcService.startServer(PekkoRpcService.java:268)
+	at org.apache.flink.runtime.rpc.RpcEndpoint.<init>(RpcEndpoint.java:147)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:44)
+	at org.apache.flink.runtime.rpc.FencedRpcEndpoint.<init>(FencedRpcEndpoint.java:53)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:269)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:247)
+	at org.apache.flink.runtime.dispatcher.Dispatcher.<init>(Dispatcher.java:228)
+	at org.apache.flink.runtime.dispatcher.StandaloneDispatcher.<init>(StandaloneDispatcher.java:42)
+	at org.apache.flink.runtime.dispatcher.SessionDispatcherFactory.createDispatcher(SessionDispatcherFactory.java:49)
+	at org.apache.flink.runtime.dispatcher.SessionDispatcherFactory.createDispatcher(SessionDispatcherFactory.java:29)
+	at org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherGatewayServiceFactory.create(DefaultDispatcherGatewayServiceFactory.java:66)
+	... 14 common frames omitted
+Caused by: org.apache.pekko.pattern.AskTimeoutException: Recipient [Actor[pekko://flink/user/rpc#771243563]] had already been terminated. Message of type [org.apache.flink.runtime.rpc.pekko.SupervisorActor$StartRpcActor].
+
+2025-02-17 16:34:48.695  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:378] Shutting down rest endpoint. 
+2025-02-17 16:34:48.708  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1186] Removing cache directory C:\Users\w7178930\AppData\Local\Temp\flink-web-ui 
+2025-02-17 16:34:48.709  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:1221] http://localhost:55542 lost leadership 
+2025-02-17 16:34:48.710  INFO [org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint:386] Shut down complete. 
+2025-02-17 16:34:48.711  WARN [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:158] Cannot deregister application. Resource manager service is not available. 
+2025-02-17 16:34:48.711  INFO [org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent:165] Closing components. 
+2025-02-17 16:34:48.712  INFO [org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl:166] Stopping resource manager service. 
+2025-02-17 16:34:50.893  INFO [za.co.woolworths.itemkafka_poc.service.FlinkJobService:88] Job simpleJob is now FAILED 
+2025-02-17 16:34:50.898 ERROR [za.co.woolworths.itemkafka_poc.service.FlinkJobService:80] Simple Job execution failed: MiniCluster is not yet running or has already been shut down. 
+2025-02-17 16:34:50.900 ERROR [za.co.woolworths.itemkafka_poc.controller.FlinkJobController:73] Error starting Simple Job: MiniCluster is not yet running or has already been shut down. 
+2025-02-17 16:34:50.909  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:417] Stopping Pekko RPC service. 
+2025-02-17 16:34:50.915  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:417] Stopping Pekko RPC service. 
+2025-02-17 16:34:50.915  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:438] Stopped Pekko RPC service. 
+2025-02-17 16:34:50.916  INFO [org.apache.flink.runtime.blob.PermanentBlobCache:251] Shutting down BLOB cache 
+2025-02-17 16:34:50.917  INFO [org.apache.flink.runtime.blob.TransientBlobCache:251] Shutting down BLOB cache 
+2025-02-17 16:34:50.919  INFO [org.apache.flink.runtime.blob.BlobServer:397] Stopped BLOB server at 0.0.0.0:55488 
+2025-02-17 16:34:50.920 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:268] Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json] 
+2025-02-17 16:34:50.921 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:119] Writing ["Flink Simple Job started successfully."] 
+2025-02-17 16:34:50.923  INFO [org.apache.flink.runtime.rpc.pekko.PekkoRpcService:438] Stopped Pekko RPC service. 
+2025-02-17 16:34:50.929 DEBUG [org.springframework.web.servlet.DispatcherServlet:1131] Completed 200 OK 
+2025-02-17 16:35:33.260 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] GET "/flink/job-status?jobName=FlinkJobSimpleSample", parameters={masked} 
+2025-02-17 16:35:33.261 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.FlinkJobController#getJobStatus(String) 
+2025-02-17 16:35:39.876 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:268] Using 'application/json', given [*/*] and supported [application/json, application/*+json] 
+2025-02-17 16:35:39.876 DEBUG [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor:119] Writing [PENDING] 
+2025-02-17 16:35:39.888 DEBUG [org.springframework.web.servlet.DispatcherServlet:1131] Completed 200 OK 
+2025-02-17 16:38:37.992  INFO [org.apache.flink.runtime.state.TaskExecutorFileMergingManager:216] Shutting down TaskExecutorFileMergingManager. 
+2025-02-17 16:38:37.992  INFO [org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager:319] Shutting down TaskExecutorLocalStateStoresManager. 
+2025-02-17 16:38:37.993  INFO [org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager:234] Shutting down TaskExecutorStateChangelogStoragesManager. 
+2025-02-17 16:38:37.995  INFO [org.apache.flink.runtime.filecache.FileCache:160] removed file cache directory C:\Users\w7178930\AppData\Local\Temp\flink-dist-cache-449f6467-530d-4af9-bdcf-a2725ffa753b 
+2025-02-17 16:38:37.996  INFO [org.apache.flink.runtime.io.disk.FileChannelManagerImpl:149] FileChannelManager removed spill file directory C:\Users\w7178930\AppData\Local\Temp\flink-io-e269dd96-90ca-4527-b4fc-a9a87df16ccb 
+2025-02-17 16:38:37.997  INFO [org.apache.flink.runtime.io.disk.FileChannelManagerImpl:149] FileChannelManager removed spill file directory C:\Users\w7178930\AppData\Local\Temp\flink-netty-shuffle-989849f3-7b47-4a5c-8236-4e2f66e5fb7f 
+2025-02-17 16:38:38.569  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:338] [Consumer clientId=consumer-item_group-1, groupId=item_group] Revoke previously assigned partitions Item_Topic-0 
+2025-02-17 16:38:38.569  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-3, groupId=item_group] Member consumer-item_group-3-b6961f9c-345b-475a-9efa-5242a3d346d9 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:38:38.569  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-2, groupId=item_group] Member consumer-item_group-2-a40252b8-e529-400a-ada1-ddf038dd8883 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:38:38.571  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-02-17 16:38:38.573  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.573  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.574  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1133] [Consumer clientId=consumer-item_group-1, groupId=item_group] Member consumer-item_group-1-9848e7f7-b7c8-4d01-bd03-31143ccf9bb1 sending LeaveGroup request to coordinator W49204302.woolworths.co.za:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-02-17 16:38:38.574  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.574  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.575  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-2, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:38:38.575  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-3, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:38:38.575  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.576  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.577  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1089] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-02-17 16:38:38.579  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-2, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.579  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-3, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.580  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-2, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.579  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1025] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation and member id due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.581  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-3, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.581  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1072] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-02-17 16:38:38.595  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:38:38.595  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:38:38.596  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:38:38.596  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:38:38.597  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:38:38.597  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:38:38.615  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-3 unregistered 
+2025-02-17 16:38:38.616  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-2 unregistered 
+2025-02-17 16:38:38.616  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:38:38.616  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:38:38.702  INFO [org.apache.kafka.common.metrics.Metrics:693] Metrics scheduler closed 
+2025-02-17 16:38:38.702  INFO [org.apache.kafka.common.metrics.Metrics:697] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-02-17 16:38:38.703  INFO [org.apache.kafka.common.metrics.Metrics:703] Metrics reporters closed 
+2025-02-17 16:38:38.705  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-02-17 16:38:38.705  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-02-17 16:38:38.709  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-17 16:38:38.713  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-02-17 16:38:38.718  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 

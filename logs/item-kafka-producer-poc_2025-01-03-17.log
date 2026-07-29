@@ -1,0 +1,790 @@
+2025-01-03 17:00:01.056  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:01.059  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:01.059  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:01.416  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:01.419  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:01.419  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:04.245  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:04.247  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:04.247  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:04.510  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:04.510  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:04.510  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:07.437  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:07.437  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:07.437  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:07.701  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:07.702  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:07.703  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:10.658  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:10.659  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:10.660  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:10.706  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:10.707  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:10.708  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:13.669  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:13.669  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:13.669  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:13.762  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:13.763  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:13.763  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:16.639  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:16.640  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:16.640  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:16.686  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:16.687  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:16.687  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:19.894  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:19.895  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:19.895  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:19.941  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:19.942  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:19.942  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:22.792  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:22.793  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:22.794  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:23.041  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:23.042  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:23.043  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:25.891  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:25.892  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:25.893  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:26.078  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:26.079  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:26.079  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:28.789  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:28.790  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:28.790  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:29.286  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:29.287  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:29.287  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:31.951  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:31.952  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:31.952  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:32.574  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:32.575  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:32.576  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:34.927  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:34.928  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:34.928  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:35.660  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:35.661  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:35.662  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:37.903  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:37.903  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:37.903  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:38.758  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:38.758  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:38.758  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:40.924  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:40.926  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:40.927  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:41.778  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:41.779  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:41.779  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:43.835  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:43.837  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:43.837  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:44.816  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:44.817  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:44.818  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:46.861  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:46.862  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:46.862  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:47.951  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:47.952  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:47.953  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:50.024  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:50.025  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:50.026  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:50.848  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:50.848  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:50.850  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:53.111  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:53.112  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:53.113  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:54.057  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:54.058  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:54.059  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:56.265  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:56.268  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:56.268  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:57.088  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:57.088  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:57.088  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:59.483  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:00:59.483  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:59.483  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:00:59.983  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:00:59.985  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:00:59.986  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:02.387  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:02.388  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:02.388  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:03.148  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:03.149  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:03.149  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:05.521  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:05.521  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:05.521  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:06.081  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:06.082  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:06.082  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:08.494  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:08.494  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:08.494  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:09.052  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:09.052  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:09.052  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:11.444  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:11.444  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:11.444  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:12.185  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:12.186  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:12.186  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:14.333  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:14.333  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:14.333  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:15.085  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:15.085  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:15.086  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:17.524  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:17.524  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:17.524  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:18.156  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:18.156  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:18.156  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:20.408  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:20.409  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:20.410  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:21.098  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:21.099  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:21.099  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:22.415 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/item-kafka/app/publish-items/v1", parameters={} 
+2025-01-03 17:01:22.416 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.ItemProducerController#createItemKafkaTopic() 
+2025-01-03 17:01:23.646  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:23.647  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:23.647  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:24.018  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:24.019  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:24.019  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:26.861  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:26.862  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:26.863  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:27.018  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:27.019  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:27.020  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:30.089  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:30.090  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:30.090  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:30.229  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:30.230  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:30.230  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:33.055  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:33.056  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:33.057  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:33.505  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:33.506  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:33.506  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:35.984  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:35.984  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:35.985  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:36.524  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:36.525  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:36.525  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:39.063  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:39.063  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:39.063  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:39.548  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:39.548  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:39.548  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:41.947  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:41.947  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:41.947  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:42.625  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:42.625  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:42.625  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:45.200  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:45.201  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:45.202  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:45.653  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:45.654  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:45.655  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:48.092  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:48.093  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:48.093  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:48.699  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:01:48.700  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:48.700  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:50.978  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:01:50.978  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:01:50.978  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:01:51.349 ERROR [za.co.woolworths.itemkafka_poc.controller.ItemProducerController:56] Error occurred in createItemKafkaTopic:  org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:1030)
+	at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:914)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer.send(DefaultKafkaProducerFactory.java:984)
+	at org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:649)
+	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:409)
+	at za.co.woolworths.itemkafka_poc.kafka.producer.ItemProducerService.sendItem(ItemProducerService.java:26)
+	at za.co.woolworths.itemkafka_poc.kafka.producer.ItemProducerService.sendItems(ItemProducerService.java:34)
+	at za.co.woolworths.itemkafka_poc.controller.ItemProducerController.createItemKafkaTopic(ItemProducerController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.lang.Object.wait(Native Method)
+	at org.apache.kafka.common.utils.SystemTime.waitObject(SystemTime.java:55)
+	at org.apache.kafka.clients.producer.internals.ProducerMetadata.awaitUpdate(ProducerMetadata.java:119)
+	at org.apache.kafka.clients.producer.KafkaProducer.waitOnMetadata(KafkaProducer.java:1088)
+	at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:935)
+	... 53 common frames omitted
+
+2025-01-03 17:01:51.350 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:268] Using 'application/text', given [application/text] and supported [application/text] 
+2025-01-03 17:01:51.351 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:119] Writing ["Error occurred in createItemKafkaTopic!"] 
+2025-01-03 17:01:51.354 DEBUG [org.springframework.web.servlet.DispatcherServlet:1101] Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.nio.channels.ClosedChannelException 
+2025-01-03 17:01:51.362  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-03 17:01:51.362  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-03 17:01:51.363  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-03 17:01:51.365  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-03 17:01:51.366  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-03 17:01:51.367  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-03 17:01:51.368  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-03 17:01:51.369  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-03 17:01:51.376  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-01-03 17:01:51.378  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-03 17:01:51.381  INFO [org.apache.kafka.clients.producer.KafkaProducer:1249] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. 
+2025-01-03 17:01:51.390  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-03 17:01:51.390  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-03 17:01:51.391  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-03 17:01:51.391  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.producer for producer-1 unregistered 
+2025-01-03 17:01:51.392  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-01-03 17:01:51.395  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-01-03 17:01:51.397  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 
+2025-01-03 17:01:55.956  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:55] Starting KafkaItemProducerPocApplication using Java 15.0.2 on W49204302 with PID 18184 (C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC\target\classes started by W7178930 in C:\Workspaces\Item-Kafka-Producer-POC\Item-Kafka-Producer-POC) 
+2025-01-03 17:01:55.959  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:640] The following 2 profiles are active: "swagger", "dev" 
+2025-01-03 17:01:56.677  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-01-03 17:01:56.720  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces. 
+2025-01-03 17:01:57.254  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http) 
+2025-01-03 17:01:57.259  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8081"] 
+2025-01-03 17:01:57.260  INFO [org.apache.catalina.core.StandardService:173] Starting service [Tomcat] 
+2025-01-03 17:01:57.260  INFO [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2025-01-03 17:01:57.372  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext 
+2025-01-03 17:01:57.372  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 1382 ms 
+2025-01-03 17:01:57.680  INFO [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting... 
+2025-01-03 17:01:58.500  INFO [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed. 
+2025-01-03 17:01:58.536  INFO [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-01-03 17:01:58.574  INFO [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final 
+2025-01-03 17:01:58.711  INFO [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2025-01-03 17:01:58.830  INFO [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2016Dialect 
+2025-01-03 17:01:59.411  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2025-01-03 17:01:59.420  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-01-03 17:01:59.898  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2025-01-03 17:01:59.969 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:367] 9 mappings in 'requestMappingHandlerMapping' 
+2025-01-03 17:02:00.202 DEBUG [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping:188] Patterns [/agent/swagger-ui*/**] in 'resourceHandlerMapping' 
+2025-01-03 17:02:00.223 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter:625] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice 
+2025-01-03 17:02:00.255 DEBUG [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:307] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice 
+2025-01-03 17:02:00.572  INFO [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] Exposing 1 endpoint(s) beneath base path '/actuator' 
+2025-01-03 17:02:00.660  INFO [org.apache.kafka.clients.consumer.ConsumerConfig:376] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-item_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = item_group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+2025-01-03 17:02:00.761  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.1.1 
+2025-01-03 17:02:00.762  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 97671528ba54a138 
+2025-01-03 17:02:00.762  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1735916520761 
+2025-01-03 17:02:00.781  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:966] [Consumer clientId=consumer-item_group-1, groupId=item_group] Subscribed to topic(s): Item_Topic 
+2025-01-03 17:02:00.792  INFO [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8081"] 
+2025-01-03 17:02:00.803  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path '' 
+2025-01-03 17:02:00.818  INFO [za.co.woolworths.itemkafka_poc.KafkaItemProducerPocApplication:61] Started KafkaItemProducerPocApplication in 5.189 seconds (JVM running for 5.46) 
+2025-01-03 17:02:03.022  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:03.026  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:03.026  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:05.181  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:05.182  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:05.182  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:07.335  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:07.337  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:07.338  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:09.598  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:09.598  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:09.599  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:11.665  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-01-03 17:02:11.665  INFO [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet' 
+2025-01-03 17:02:11.666 DEBUG [org.springframework.web.servlet.DispatcherServlet:520] Detected StandardServletMultipartResolver 
+2025-01-03 17:02:11.666 DEBUG [org.springframework.web.servlet.DispatcherServlet:544] Detected AcceptHeaderLocaleResolver 
+2025-01-03 17:02:11.666 DEBUG [org.springframework.web.servlet.DispatcherServlet:569] Detected FixedThemeResolver 
+2025-01-03 17:02:11.666 DEBUG [org.springframework.web.servlet.DispatcherServlet:719] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@60317de8 
+2025-01-03 17:02:11.667 DEBUG [org.springframework.web.servlet.DispatcherServlet:783] Detected org.springframework.web.servlet.support.SessionFlashMapManager@18f794e 
+2025-01-03 17:02:11.667 DEBUG [org.springframework.web.servlet.DispatcherServlet:542] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data 
+2025-01-03 17:02:11.667  INFO [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms 
+2025-01-03 17:02:11.671 DEBUG [org.springframework.web.servlet.DispatcherServlet:119] POST "/item-kafka/app/publish-items/v1", parameters={} 
+2025-01-03 17:02:11.675 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping:522] Mapped to za.co.woolworths.itemkafka_poc.controller.ItemProducerController#createItemKafkaTopic() 
+2025-01-03 17:02:12.020  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:12.021  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:12.021  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:12.107  INFO [org.apache.kafka.clients.producer.ProducerConfig:376] ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ 
+2025-01-03 17:02:12.114  INFO [org.apache.kafka.clients.producer.KafkaProducer:572] [Producer clientId=producer-1] Instantiated an idempotent producer. 
+2025-01-03 17:02:12.122  INFO [org.apache.kafka.common.utils.AppInfoParser:119] Kafka version: 3.1.1 
+2025-01-03 17:02:12.123  INFO [org.apache.kafka.common.utils.AppInfoParser:120] Kafka commitId: 97671528ba54a138 
+2025-01-03 17:02:12.123  INFO [org.apache.kafka.common.utils.AppInfoParser:121] Kafka startTimeMs: 1735916532122 
+2025-01-03 17:02:14.172  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:14.173  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:14.174  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:14.994  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:14.995  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:14.996  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:16.337  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:16.339  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:16.339  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:18.066  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:18.067  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:18.068  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:18.487  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:18.488  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:18.488  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:20.781  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:20.784  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:20.785  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:20.967  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:20.968  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:20.969  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:23.232  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:23.232  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:23.232  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:23.842  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:23.842  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:23.843  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:25.959  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:25.960  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:25.960  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:27.051  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:27.051  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:27.051  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:28.995  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:28.995  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:28.995  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:30.010  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:30.012  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:30.013  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:31.902  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:31.903  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:31.903  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:33.133  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:33.135  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:33.135  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:34.789  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:34.790  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:34.790  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:36.273  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:36.274  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:36.275  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:37.926  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:37.927  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:37.928  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:39.487  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:39.488  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:39.489  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:40.953  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:40.954  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:40.955  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:42.576  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:42.577  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:42.578  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:43.889  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:43.891  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:43.891  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:45.793  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:45.794  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:45.795  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:46.959  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:46.960  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:46.961  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:48.999  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:49.001  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:49.002  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:49.987  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:49.988  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:49.989  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:51.904  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:51.906  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:51.906  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:52.961  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:52.962  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:52.963  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:55.127  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:55.129  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:55.129  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:55.987  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:55.988  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:55.989  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:58.158  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:02:58.159  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:58.160  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:02:58.847  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:02:58.848  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:02:58.849  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:01.296  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:01.297  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:01.298  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:02.076  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:02.077  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:02.077  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:04.385  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:04.386  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:04.387  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:04.964  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:04.965  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:04.965  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:07.354  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:07.355  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:07.356  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:08.042  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:08.043  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:08.044  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:10.433  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:10.434  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:10.435  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:11.134  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:11.135  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:11.136  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:12.135 ERROR [org.springframework.kafka.support.LoggingProducerListener:261] Exception thrown when sending a message with key='100' and payload='{"itemId":"100","itemLevel":1,"itemNumberType":"PLU","businessUnitId":70,"catchWeightInd":"N","class...' to topic Item_Topic: org.apache.kafka.common.errors.TimeoutException: Topic Item_Topic not present in metadata after 60000 ms.
+
+2025-01-03 17:03:12.139 ERROR [za.co.woolworths.itemkafka_poc.controller.ItemProducerController:56] Error occurred in createItemKafkaTopic:  org.springframework.kafka.KafkaException: Send failed; nested exception is org.apache.kafka.common.errors.TimeoutException: Topic Item_Topic not present in metadata after 60000 ms.
+	at org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:660)
+	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:409)
+	at za.co.woolworths.itemkafka_poc.kafka.producer.ItemProducerService.sendItem(ItemProducerService.java:26)
+	at za.co.woolworths.itemkafka_poc.kafka.producer.ItemProducerService.sendItems(ItemProducerService.java:34)
+	at za.co.woolworths.itemkafka_poc.controller.ItemProducerController.createItemKafkaTopic(ItemProducerController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Topic Item_Topic not present in metadata after 60000 ms.
+
+2025-01-03 17:03:12.142 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:268] Using 'application/text', given [application/text] and supported [application/text] 
+2025-01-03 17:03:12.143 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:119] Writing ["Error occurred in createItemKafkaTopic!"] 
+2025-01-03 17:03:12.147 DEBUG [org.springframework.web.servlet.DispatcherServlet:1101] Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Connection reset by peer 
+2025-01-03 17:03:13.631  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:13.631  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:13.632  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:14.215  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:14.216  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:14.216  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:16.536  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:16.537  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:16.537  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:17.238  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:17.238  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:17.239  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:19.630  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:19.631  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:19.632  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:20.218  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:20.218  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:20.219  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:22.795  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:22.796  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:22.797  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:23.447  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:23.448  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:23.448  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:25.814  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:25.815  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:25.816  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:26.408  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:26.409  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:26.410  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:28.782  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:28.783  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:28.784  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:29.484  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:29.485  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:29.486  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:31.875  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:31.875  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:31.875  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:32.703  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:32.705  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:32.706  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:34.898  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node -1 disconnected. 
+2025-01-03 17:03:34.900  WARN [org.apache.kafka.clients.NetworkClient:775] [Consumer clientId=consumer-item_group-1, groupId=item_group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:34.901  WARN [org.apache.kafka.clients.NetworkClient:1063] [Consumer clientId=consumer-item_group-1, groupId=item_group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:35.009  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-03 17:03:35.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-03 17:03:35.010  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-03 17:03:35.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-03 17:03:35.010  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-03 17:03:35.011  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-03 17:03:35.011  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-03 17:03:35.011  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-03 17:03:35.013  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-01-03 17:03:35.013  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-03 17:03:35.016  INFO [org.apache.kafka.clients.producer.KafkaProducer:1249] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. 
+2025-01-03 17:03:35.899  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node -1 disconnected. 
+2025-01-03 17:03:35.899  WARN [org.apache.kafka.clients.NetworkClient:775] [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. 
+2025-01-03 17:03:35.899  WARN [org.apache.kafka.clients.NetworkClient:1063] [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected 
+2025-01-03 17:03:36.012  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-03 17:03:36.012  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-03 17:03:36.013  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-03 17:03:36.014  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.producer for producer-1 unregistered 
+2025-01-03 17:03:36.016  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-01-03 17:03:36.019  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-01-03 17:03:36.022  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 

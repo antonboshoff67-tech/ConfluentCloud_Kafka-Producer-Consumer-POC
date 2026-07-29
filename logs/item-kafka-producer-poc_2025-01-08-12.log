@@ -1,0 +1,159 @@
+2025-01-08 12:01:17.378  WARN [com.zaxxer.hikari.pool.HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m5s161ms621µs400ns). 
+2025-01-08 12:01:17.378  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:916] [Consumer clientId=consumer-item_group-1, groupId=item_group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted. 
+2025-01-08 12:01:17.385  INFO [org.apache.kafka.clients.Metadata:402] [Producer clientId=producer-1] Resetting the last seen epoch of partition Item_Topic-0 to 0 since the associated topicId changed from null to lncACV4PTO-QzmY7TGKExg 
+2025-01-08 12:01:17.400  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:929] [Consumer clientId=consumer-item_group-1, groupId=item_group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:01:17.400  INFO [org.apache.kafka.clients.NetworkClient:324] [Consumer clientId=consumer-item_group-1, groupId=item_group] Client requested disconnect from node 2147483647 
+2025-01-08 12:01:17.402  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:853] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:01:17.403  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:916] [Consumer clientId=consumer-item_group-1, groupId=item_group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: true. Rediscovery will be attempted. 
+2025-01-08 12:01:17.405  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:853] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:01:17.406  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:916] [Consumer clientId=consumer-item_group-1, groupId=item_group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: false. Rediscovery will be attempted. 
+2025-01-08 12:01:17.406  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:929] [Consumer clientId=consumer-item_group-1, groupId=item_group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:01:17.511  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:853] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:01:17.519  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1153] [Consumer clientId=consumer-item_group-1, groupId=item_group] Attempt to heartbeat with Generation{generationId=52, memberId='consumer-item_group-1-2c7bad6b-608a-42a8-a2c6-b7a73a7b9e09', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation 
+2025-01-08 12:01:17.519  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response 
+2025-01-08 12:01:17.519  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response 
+2025-01-08 12:01:17.520 ERROR [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1216] [Consumer clientId=consumer-item_group-1, groupId=item_group] Offset commit failed on partition Item_Topic-0 at offset 2430: The coordinator is not aware of this member. 
+2025-01-08 12:01:17.521  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1276] [Consumer clientId=consumer-item_group-1, groupId=item_group] OffsetCommit failed with Generation{generationId=52, memberId='consumer-item_group-1-2c7bad6b-608a-42a8-a2c6-b7a73a7b9e09', protocol='range'}: The coordinator is not aware of this member. 
+2025-01-08 12:01:17.521  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: encountered UNKNOWN_MEMBER_ID from OFFSET_COMMIT response 
+2025-01-08 12:01:17.522  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: encountered UNKNOWN_MEMBER_ID from OFFSET_COMMIT response 
+2025-01-08 12:01:17.522 ERROR [org.springframework.kafka.listener.KafkaMessageListenerContainer:149] Consumer exception java.lang.IllegalStateException: This error handler cannot process 'org.apache.kafka.clients.consumer.CommitFailedException's; no record information is available
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleOtherException(DefaultErrorHandler.java:155)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.handleConsumerException(KafkaMessageListenerContainer.java:1760)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1283)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records.
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:1288)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:1189)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:1196)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:1171)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture$1.onSuccess(RequestFuture.java:206)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.fireSuccess(RequestFuture.java:169)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.complete(RequestFuture.java:129)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler.fireCompletion(ConsumerNetworkClient.java:602)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.firePendingCompletedRequests(ConsumerNetworkClient.java:412)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:297)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:236)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:215)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:1031)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1492)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy152.commitSync(Unknown Source)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doCommitSync(KafkaMessageListenerContainer.java:2981)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitSync(KafkaMessageListenerContainer.java:2976)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitIfNecessary(KafkaMessageListenerContainer.java:2962)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.processCommits(KafkaMessageListenerContainer.java:2754)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1311)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1234)
+	... 4 common frames omitted
+
+2025-01-08 12:01:17.523  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:719] [Consumer clientId=consumer-item_group-1, groupId=item_group] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group 
+2025-01-08 12:01:17.523  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:329] [Consumer clientId=consumer-item_group-1, groupId=item_group] Lost previously assigned partitions Item_Topic-0 
+2025-01-08 12:01:17.524  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions lost: [Item_Topic-0] 
+2025-01-08 12:01:17.524  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-01-08 12:01:17.524  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:535] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-01-08 12:01:17.532  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: need to re-join with the given member-id 
+2025-01-08 12:01:17.532  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:535] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-01-08 12:01:17.534  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:595] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=54, memberId='consumer-item_group-1-77ea8cc3-abfc-42f2-aa39-7b470aa4b1c5', protocol='range'} 
+2025-01-08 12:01:17.535  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:654] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 54: {consumer-item_group-1-77ea8cc3-abfc-42f2-aa39-7b470aa4b1c5=Assignment(partitions=[Item_Topic-0])} 
+2025-01-08 12:01:17.537  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:761] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully synced group in generation Generation{generationId=54, memberId='consumer-item_group-1-77ea8cc3-abfc-42f2-aa39-7b470aa4b1c5', protocol='range'} 
+2025-01-08 12:01:17.537  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:279] [Consumer clientId=consumer-item_group-1, groupId=item_group] Notifying assignor about the new Assignment(partitions=[Item_Topic-0]) 
+2025-01-08 12:01:17.538  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:291] [Consumer clientId=consumer-item_group-1, groupId=item_group] Adding newly assigned partitions: Item_Topic-0 
+2025-01-08 12:01:17.540  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:846] [Consumer clientId=consumer-item_group-1, groupId=item_group] Setting offset for partition Item_Topic-0 to the committed offset FetchPosition{offset=2366, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}} 
+2025-01-08 12:01:17.541  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [Item_Topic-0] 
+2025-01-08 12:01:25.720 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:268] Using 'application/text', given [application/text] and supported [application/text] 
+2025-01-08 12:25:34.520 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor:119] Writing ["Items sent to Kafka Topic successfully!"] 
+2025-01-08 12:25:34.520  INFO [org.apache.kafka.clients.NetworkClient:935] [Producer clientId=producer-1] Node 0 disconnected. 
+2025-01-08 12:25:34.521  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node 0 disconnected. 
+2025-01-08 12:25:34.520  WARN [com.zaxxer.hikari.pool.HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m17s136ms141µs900ns). 
+2025-01-08 12:25:34.522  INFO [org.apache.kafka.clients.NetworkClient:341] [Consumer clientId=consumer-item_group-1, groupId=item_group] Cancelled in-flight FETCH request with correlation id 6129 due to node 0 being disconnected (elapsed time since creation: 1448801ms, elapsed time since send: 1448801ms, request timeout: 30000ms) 
+2025-01-08 12:25:34.522  INFO [org.apache.kafka.clients.NetworkClient:935] [Consumer clientId=consumer-item_group-1, groupId=item_group] Node 2147483647 disconnected. 
+2025-01-08 12:25:34.523 DEBUG [org.springframework.web.servlet.DispatcherServlet:1131] Completed 200 OK 
+2025-01-08 12:25:34.523  INFO [org.apache.kafka.clients.NetworkClient:341] [Consumer clientId=consumer-item_group-1, groupId=item_group] Cancelled in-flight HEARTBEAT request with correlation id 6128 due to node 2147483647 being disconnected (elapsed time since creation: 1448801ms, elapsed time since send: 1448801ms, request timeout: 30000ms) 
+2025-01-08 12:25:34.524  INFO [org.apache.kafka.clients.FetchSessionHandler:602] [Consumer clientId=consumer-item_group-1, groupId=item_group] Error sending fetch request (sessionId=266448879, epoch=5132) to node 0: org.apache.kafka.common.errors.DisconnectException: null
+
+2025-01-08 12:25:34.525  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:916] [Consumer clientId=consumer-item_group-1, groupId=item_group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: null.isDisconnected: true. Rediscovery will be attempted. 
+2025-01-08 12:25:34.572  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:853] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:25:34.578  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:853] [Consumer clientId=consumer-item_group-1, groupId=item_group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null) 
+2025-01-08 12:25:34.582 ERROR [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1216] [Consumer clientId=consumer-item_group-1, groupId=item_group] Offset commit failed on partition Item_Topic-0 at offset 2465: The coordinator is not aware of this member. 
+2025-01-08 12:25:34.583  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1276] [Consumer clientId=consumer-item_group-1, groupId=item_group] OffsetCommit failed with Generation{generationId=54, memberId='consumer-item_group-1-77ea8cc3-abfc-42f2-aa39-7b470aa4b1c5', protocol='range'}: The coordinator is not aware of this member. 
+2025-01-08 12:25:34.583  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: encountered UNKNOWN_MEMBER_ID from OFFSET_COMMIT response 
+2025-01-08 12:25:34.584  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: encountered UNKNOWN_MEMBER_ID from OFFSET_COMMIT response 
+2025-01-08 12:25:34.585 ERROR [org.springframework.kafka.listener.KafkaMessageListenerContainer:149] Consumer exception java.lang.IllegalStateException: This error handler cannot process 'org.apache.kafka.clients.consumer.CommitFailedException's; no record information is available
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleOtherException(DefaultErrorHandler.java:155)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.handleConsumerException(KafkaMessageListenerContainer.java:1760)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1283)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records.
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:1288)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator$OffsetCommitResponseHandler.handle(ConsumerCoordinator.java:1189)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:1196)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$CoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:1171)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture$1.onSuccess(RequestFuture.java:206)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.fireSuccess(RequestFuture.java:169)
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.complete(RequestFuture.java:129)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler.fireCompletion(ConsumerNetworkClient.java:602)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.firePendingCompletedRequests(ConsumerNetworkClient.java:412)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:297)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:236)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:215)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.commitOffsetsSync(ConsumerCoordinator.java:1031)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.commitSync(KafkaConsumer.java:1492)
+	at jdk.internal.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy152.commitSync(Unknown Source)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doCommitSync(KafkaMessageListenerContainer.java:2981)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitSync(KafkaMessageListenerContainer.java:2976)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.commitIfNecessary(KafkaMessageListenerContainer.java:2962)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.processCommits(KafkaMessageListenerContainer.java:2754)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1311)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1234)
+	... 4 common frames omitted
+
+2025-01-08 12:25:34.586  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:719] [Consumer clientId=consumer-item_group-1, groupId=item_group] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group 
+2025-01-08 12:25:34.587  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:329] [Consumer clientId=consumer-item_group-1, groupId=item_group] Lost previously assigned partitions Item_Topic-0 
+2025-01-08 12:25:34.588  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions lost: [Item_Topic-0] 
+2025-01-08 12:25:34.588  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-01-08 12:25:34.589  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:535] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-01-08 12:25:34.595  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: need to re-join with the given member-id 
+2025-01-08 12:25:34.597  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:535] [Consumer clientId=consumer-item_group-1, groupId=item_group] (Re-)joining group 
+2025-01-08 12:25:34.604  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:595] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully joined group with generation Generation{generationId=56, memberId='consumer-item_group-1-60e4059b-4661-4616-8f09-37c653cda994', protocol='range'} 
+2025-01-08 12:25:34.633  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:654] [Consumer clientId=consumer-item_group-1, groupId=item_group] Finished assignment for group at generation 56: {consumer-item_group-1-60e4059b-4661-4616-8f09-37c653cda994=Assignment(partitions=[Item_Topic-0])} 
+2025-01-08 12:25:34.637  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:761] [Consumer clientId=consumer-item_group-1, groupId=item_group] Successfully synced group in generation Generation{generationId=56, memberId='consumer-item_group-1-60e4059b-4661-4616-8f09-37c653cda994', protocol='range'} 
+2025-01-08 12:25:34.638  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:279] [Consumer clientId=consumer-item_group-1, groupId=item_group] Notifying assignor about the new Assignment(partitions=[Item_Topic-0]) 
+2025-01-08 12:25:34.638  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:291] [Consumer clientId=consumer-item_group-1, groupId=item_group] Adding newly assigned partitions: Item_Topic-0 
+2025-01-08 12:25:34.642  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:846] [Consumer clientId=consumer-item_group-1, groupId=item_group] Setting offset for partition Item_Topic-0 to the committed offset FetchPosition{offset=2464, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}} 
+2025-01-08 12:25:34.642  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions assigned: [Item_Topic-0] 
+2025-01-08 12:42:18.102  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:310] [Consumer clientId=consumer-item_group-1, groupId=item_group] Revoke previously assigned partitions Item_Topic-0 
+2025-01-08 12:42:18.102  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: partitions revoked: [Item_Topic-0] 
+2025-01-08 12:42:18.102  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1060] [Consumer clientId=consumer-item_group-1, groupId=item_group] Member consumer-item_group-1-60e4059b-4661-4616-8f09-37c653cda994 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics 
+2025-01-08 12:42:18.103  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-08 12:42:18.103  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-08 12:42:18.103  INFO [org.apache.kafka.clients.consumer.KafkaConsumer:1075] [Consumer clientId=consumer-item_group-1, groupId=item_group] Unsubscribed all topics or patterns and assigned partitions 
+2025-01-08 12:42:18.105  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:972] [Consumer clientId=consumer-item_group-1, groupId=item_group] Resetting generation due to: consumer pro-actively leaving the group 
+2025-01-08 12:42:18.106  INFO [org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1000] [Consumer clientId=consumer-item_group-1, groupId=item_group] Request joining group due to: consumer pro-actively leaving the group 
+2025-01-08 12:42:18.117  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-08 12:42:18.118  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-08 12:42:18.118  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-08 12:42:18.128  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.consumer for consumer-item_group-1 unregistered 
+2025-01-08 12:42:18.129  INFO [org.springframework.kafka.listener.KafkaMessageListenerContainer:292] item_group: Consumer stopped 
+2025-01-08 12:42:18.135  INFO [org.apache.kafka.clients.producer.KafkaProducer:1249] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms. 
+2025-01-08 12:42:18.137  INFO [org.apache.kafka.common.metrics.Metrics:659] Metrics scheduler closed 
+2025-01-08 12:42:18.138  INFO [org.apache.kafka.common.metrics.Metrics:663] Closing reporter org.apache.kafka.common.metrics.JmxReporter 
+2025-01-08 12:42:18.138  INFO [org.apache.kafka.common.metrics.Metrics:669] Metrics reporters closed 
+2025-01-08 12:42:18.138  INFO [org.apache.kafka.common.utils.AppInfoParser:83] App info kafka.producer for producer-1 unregistered 
+2025-01-08 12:42:18.140  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-01-08 12:42:18.145  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-01-08 12:42:18.147  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 

@@ -1,0 +1,67 @@
+2025-02-26 10:00:12.052 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:00:12.069 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:00:33.081 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740556833081 sessioncount 0 
+2025-02-26 10:00:33.083 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 2 expired sessions: 0 
+2025-02-26 10:00:42.072 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:00:42.073 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:01:12.081 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:01:12.082 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:01:33.123 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740556893123 sessioncount 0 
+2025-02-26 10:01:33.124 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 1 expired sessions: 0 
+2025-02-26 10:01:42.092 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:01:42.093 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:02:12.110 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:02:12.111 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:02:33.172 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740556953172 sessioncount 0 
+2025-02-26 10:02:33.174 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 2 expired sessions: 0 
+2025-02-26 10:02:42.121 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:02:42.121 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:03:12.132 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:03:12.133 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:03:33.229 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740557013229 sessioncount 0 
+2025-02-26 10:03:33.230 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 1 expired sessions: 0 
+2025-02-26 10:03:42.137 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:03:42.138 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:04:12.153 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:04:12.154 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:04:33.283 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740557073283 sessioncount 0 
+2025-02-26 10:04:33.284 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 1 expired sessions: 0 
+2025-02-26 10:04:42.158 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:04:42.159 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:05:12.171 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:05:12.172 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:05:33.341 DEBUG [org.apache.catalina.session.ManagerBase:173] Start expire sessions StandardManager at 1740557133341 sessioncount 0 
+2025-02-26 10:05:33.343 DEBUG [org.apache.catalina.session.ManagerBase:173] End expire sessions StandardManager processingTime 1 expired sessions: 0 
+2025-02-26 10:05:42.180 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:05:42.181 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:06:12.182 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:06:12.183 DEBUG [com.zaxxer.hikari.pool.HikariPool:518] HikariPool-1 - Fill pool skipped, pool is at sufficient level. 
+2025-02-26 10:06:27.453  INFO [org.apache.flink.runtime.state.TaskExecutorFileMergingManager:216] Shutting down TaskExecutorFileMergingManager. 
+2025-02-26 10:06:27.455 DEBUG [org.springframework.boot.availability.ApplicationAvailabilityBean:77] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC 
+2025-02-26 10:06:27.456 DEBUG [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:1049] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54afd745, started on Wed Feb 26 09:27:37 CAT 2025 
+2025-02-26 10:06:27.462 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:365] Stopping beans in phase 2147483647 
+2025-02-26 10:06:27.465 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:238] Bean 'webServerGracefulShutdown' completed its stop procedure 
+2025-02-26 10:06:27.465 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:365] Stopping beans in phase 2147483646 
+2025-02-26 10:06:28.064 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:238] Bean 'webServerStartStop' completed its stop procedure 
+2025-02-26 10:06:28.064 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:365] Stopping beans in phase 2147483547 
+2025-02-26 10:06:28.064 DEBUG [org.springframework.context.support.DefaultLifecycleProcessor:238] Bean 'org.springframework.kafka.config.internalKafkaListenerEndpointRegistry' completed its stop procedure 
+2025-02-26 10:06:28.067 DEBUG [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:218] Shutting down ExecutorService 'applicationTaskExecutor' 
+2025-02-26 10:06:28.070  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-02-26 10:06:28.070 DEBUG [org.hibernate.internal.SessionFactoryImpl:821] HHH000031: Closing 
+2025-02-26 10:06:28.071 DEBUG [org.hibernate.type.spi.TypeConfiguration$Scope:345] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@5ca4f509] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@1ef5cde4] 
+2025-02-26 10:06:28.071 DEBUG [org.hibernate.service.internal.AbstractServiceRegistryImpl:419] Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries 
+2025-02-26 10:06:28.073 DEBUG [org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl:295] Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries 
+2025-02-26 10:06:28.078  INFO [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated... 
+2025-02-26 10:06:28.078 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0) 
+2025-02-26 10:06:28.081 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:11 ClientConnectionId: 5bc9502b-e568-4e8c-88b4-3fd0f46082ee: (connection evicted) 
+2025-02-26 10:06:28.082 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:12 ClientConnectionId: ded309f1-e9b0-4ef4-a3f7-4d1f8ad27f55: (connection evicted) 
+2025-02-26 10:06:28.082 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:13 ClientConnectionId: 832ede6d-9d90-4056-91b4-ebabc5398b6c: (connection evicted) 
+2025-02-26 10:06:28.083 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:14 ClientConnectionId: d1fc009c-bc64-48d0-b4f5-0f7903ca73bf: (connection evicted) 
+2025-02-26 10:06:28.083 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:15 ClientConnectionId: 9a393138-74c0-4686-bd1e-e685ba18dbef: (connection evicted) 
+2025-02-26 10:06:28.084 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:16 ClientConnectionId: 6a1dc75a-d240-4c8a-b3d4-05d892dff596: (connection evicted) 
+2025-02-26 10:06:28.084 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:17 ClientConnectionId: 4c273ab8-1b91-457b-b468-350eb24be7d1: (connection evicted) 
+2025-02-26 10:06:28.084 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:18 ClientConnectionId: 7a513a87-a0c7-4918-a445-040ce9e7d6b6: (connection evicted) 
+2025-02-26 10:06:28.085 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:19 ClientConnectionId: cfd632b5-ff3f-425d-a918-fcbd9383b5a6: (connection evicted) 
+2025-02-26 10:06:28.085 DEBUG [com.zaxxer.hikari.pool.PoolBase:134] HikariPool-1 - Closing connection ConnectionID:20 ClientConnectionId: d3b2fe70-4380-40fe-9086-b00279aa1a81: (connection evicted) 
+2025-02-26 10:06:28.086 DEBUG [com.zaxxer.hikari.pool.HikariPool:421] HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0) 
+2025-02-26 10:06:28.086  INFO [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed. 
