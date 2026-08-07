@@ -1,153 +1,114 @@
 server:
-  port: 8082 # localhost port
-  #SSL Port
-  # port: 8443
-#  ssl:
-#    key-store: '/opt/apps/.secure/mykeystore.jks'
-#    key-store-password: 'changeme'
-#    key-store-type: 'JKS'
-#  tomcat:
-#    accesslog:
-#      directory: /opt/deployments/Item-Kafka-Producer/logs/
-#      enabled: true
-#      pattern: '[Local: %A] [Remote: %a] [Request protocol: %H] [Query string: %q] [Request line: %r] [HTTP code: %s] "%{Referer}i" "%{User-Agent}i"'
+  port: 8082
 
 keys:
   ssl:
     enabled: false
-    keyStore: '/opt/apps/.secure/scc-hybrid-chat-dev.fnb.co.za.jks'
-    keyStorePassword: 'uxY8N]nb:1t-ByR'
-    trustStore: '/opt/apps/.secure/cacerts'
-    trustStorePassword: 'changeit'
+    keyStore: ${ITEM_SSL_KEYSTORE:/opt/apps/.secure/scc-hybrid-chat-dev.antontech.co.za.jks}
+    keyStorePassword: ${ITEM_SSL_KEYSTORE_PASSWORD:change-me}
+    trustStore: ${ITEM_SSL_TRUSTSTORE:/opt/apps/.secure/cacerts}
+    trustStorePassword: ${ITEM_SSL_TRUSTSTORE_PASSWORD:changeit}
 
 spring:
   application:
     name: item-kafka-producer-poc
   datasource:
-    url: jdbc:sqlserver://C21SQL04\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false
+    url: ${ITEM_MSSQL_URL:jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false}
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    # No username & password needed for integrated security
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
   mysql:
-    jdbcUrl: jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true
+    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: Anton@Perfect07
-#  sqlserver:
-#    jdbcUrl: jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;encrypt=false
-#  restartStrategy:
-#    strategy: fixed-delay  # Use fixed-delay strategy
-#    attempts: 3  # Number of retry attempts
-#    delay: 10s  # Delay between retry attempts
+    username: ${ITEM_MYSQL_USERNAME:root}
+    password: ${ITEM_MYSQL_PASSWORD:change-me}
   kafka:
-    bootstrap-servers: localhost:9092 # Replace with your Kafka broker details
+    bootstrap-servers: ${ITEM_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     producer:
       properties:
-        request.timeout.ms: 120000  # 120 seconds timeout for requests
-        retries: 3                   # Number of retries for failed sends
+        request.timeout.ms: 120000
+        retries: 3
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer  # Use StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
-      group-id: item_group # Main consumer group
+      group-id: item_group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       auto-offset-reset: earliest
-      max-poll-interval-ms: 300000  # Adjust to 5 minutes
-      session-timeout-ms: 45000      # Keep this as needed
-      # enable-auto-commit: false  # Only if using manual acknowledgment
-      #properties:
-      # Add any additional consumer properties here if needed (e.g., security settings)
-      manual-consumer: # Configuration for the manual consumer
-        group-id: manual-item-group # manual consumer group id
+      max-poll-interval-ms: 300000
+      session-timeout-ms: 45000
+      manual-consumer:
+        group-id: manual-item-group
         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         auto-offset-reset: earliest
         properties:
-          max.poll.interval.ms: 60000  # Increase to 60 seconds (adjust as needed)
+          max.poll.interval.ms: 60000
 
 flink:
   jobmanager:
     web:
-      address: 0.0.0.0  # Allow access from all network interfaces
+      address: 0.0.0.0
     rpc:
-      address: localhost  # RPC address
+      address: localhost
     memory:
       heap:
-        size: 2048m  # JobManager Heap Memory
+        size: 2048m
       process:
-        size: 2048m  # Total JVM Process Memory for JobManager
+        size: 2048m
   taskmanager:
     memory:
       heap:
-        size: 2048m  # TaskManager Heap Memory
+        size: 2048m
       task:
         heap:
-          size: 1024m  # Specific size for task heap memory
+          size: 1024m
       managed:
-        size: 512m  # Managed memory size for Flink tasks
+        size: 512m
       process:
-        size: 2048m  # Total JVM Process Memory for TaskManager
+        size: 2048m
       network:
         memory:
-          fraction: 0.1  # Fraction for network buffers
-          min: 64mb  # Minimum network memory for TaskManagers
-          max: 1gb  # Maximum network memory for TaskManagers
+          fraction: 0.1
+          min: 64mb
+          max: 1gb
     numberOfTaskSlots: 2
   parallelism:
-    default: 2  # Default parallelism for Flink jobs
+    default: 2
   metrics:
-    enabled: false  # Set to true to enable metrics
-    reporter:
-    # Configure any reporters here (e.g., Prometheus, Grafana, etc.)
-    # e.g.,
-    # Prometheus:
-    #  enabled: true
-    #  port: 9249 # Disable metrics if not required for local tests
+    enabled: false
 
 logging:
   config:
     classpath: logback-spring.xml
   file:
-    name: logs/${NAME:ef-hello_world-agent-poc}_%d{${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd}}.log
+    name: logs/${spring.application.name}_${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd}.log
   level:
-    root: INFO  # This will set the logging level to DEBUG for all classes
-    za.co.woolworths.itemkafka_poc: DEBUG  # Capture DEBUG logs for your parent package
-    za.co.woolworths.itemkafka_poc.controller: DEBUG # Setting DEBUG level for the entire controller package
-    za.co.woolworths.itemkafka_poc.kafka.consumer: DEBUG # Setting DEBUG level for the entire kafka consumer package
-    za.co.woolworths.itemkafka_poc.kafka.producer: DEBUG # Setting DEBUG level for the entire kafka producer package
-    za.co.woolworths.itemkafka_poc.consumer: DEBUG  # Setting DEBUG level for the entire consumer package
-    za.co.woolworths.itemkafka_poc.producer: DEBUG  # Setting DEBUG level for the entire consumer package
-    za.co.woolworths.itemkafka_poc.service: DEBUG # Setting DEBUG level for the entire service package
+    root: INFO
+    com.antontech.itemkafka_poc: INFO
+    com.antontech.itemkafka_poc.controller: INFO
+    com.antontech.itemkafka_poc.kafka.consumer: INFO
+    com.antontech.itemkafka_poc.kafka.producer: INFO
+    com.antontech.itemkafka_poc.service: INFO
     org:
       springframework:
-        kafka: DEBUG
-        web: DEBUG
-        ws:
-          client:
-            MessageTracing:
-              sent: DEBUG
-              received: DEBUG
-          server:
-            MessageTracing:
-              sent: DEBUG
-              received: DEBUG
+        kafka: INFO
+        web: INFO
       apache:
-        http: DEBUG
+        http: INFO
     httpclient:
-      wire: DEBUG
+      wire: INFO
 
 gateway:
   endpoint:
-    # The following endpoint is what you will add to call another endpoint from this app via intermediary SSL layer - for that enable SSL also
-    url: 'http://localhost:8081/item-kafka/app/send-items/v1'
+    url: ${ITEM_GATEWAY_URL:http://localhost:8081/item-kafka/app/send-items/v1}
 
 jwt:
-  pvtkey: 'MIIEogIBAAKCAQEAkcMgHHPzLwiIYg7raoyR6QXdgbNJwou9Tah1/3qTEgw3bV6PrpqSL3PdrOBaiCa6cGwNr3i4ZGWh2B8iQuYcUVxsuImH9+uu6X/K0uE0avKrGj5e1Xawxb+VxuhHXkngD/LrRqryNCBAIJ3Cf7f8WdNJtUvSPO/FcU8EeYlmTOY9MUIeXptIupCwQZ/7jawpiXj/lau8lf67BrDYdiqH/gjwAja//LiqElWF7Ud6aNUbLp0ETj2nhnqvk2pWSfye3H4m5vVlqeKAeuVtPQBIrccCKfZ6AAfnfIhWFlnxkwEVsLtT2iDeZ9QZQcyiMudjSE8OE8pTo/9k55ux+09n8wIDAQABAoIBABQCYbOWNTFlLfesDaQUROlknTozRvJWZXe2IvCdvnexRqCUZQv2ew/Zi3oyWCstidVp99z5KPLbQsLcz0K4vPVsRx5z/r7JUzsJiGm3cY8m3dcd7b3G69BRkvl5pGZspL37vlF2oQYH0VXI4kzPEGyyRQGGtYcY8RUzYC1g77KpiXPYpjx24UeH2Mw9/werJfvHVAhZoHXsoYE3gxS1UT2L8/OlYiNIqoxPGIPPknk+Ih2MCHeuZUen5Q/3LU7nRyoKcnb0WRuQH4A9c3zdgZaked5jrxRRZT3ML+1UPmGEZ4m76nqJI9DFVhh68vqKZenwmJYCy8fqUzvZac4EzRECgYEAuYxfXU89gsgRvu4NGdjzrBlKa5e+RccKWevRunfvm/Q9syH+VdAyxBqPavmxLolsbBOY41StbDqu7UoF3YS+L3yorr7ej3YygoiJPyLHv/mC9szGM11Qk7gJKg1ohkAfWFBVqRc/51CxTfxwxgxJNDwOcIuInhmmkbQCV2YdrEMCgYEAyRt4oIDxc0z+uh7HyXUIO3OzmUeQ4BBbY+mD1m94xYNr5cyXPBI8WHk6ZMvVD6bhBsHyNzTs7TLOmSiBXExntTWWp1awwDVU0ZamOqRt7p0EDDFsKVONuTwDDpGcKRmxPFr2pE2f3Pwn4IvxAryf6BlBnE49P192JOgWkWPZcpECgYBrByB/J1UY2iT6WEAwV6d+7vuxgk8b2ssKwW8xuzr4X3Mzn/kgML8HxTZTA4KDkHt8//ThtJdwZY0/jMJDW+2EYMjAO5MPd6N9Dhr00zAbeWZkzAvL1xjCjJakriVLwzMRcw1mQuX2nOIZVPMMGkwjmDzQCHyejbc6NnZfSaT2FwKBgDl0483XiSRMByrdyG7CRQvXTqSoUbfydGnjOYt2ZabomVcaUMsU2rDcUdaidcj3AKuRlcY4FMjgDy6q5+qa2bZoDRbaKb2Afy8yP2PZvp7BtXpWVHSqLn+Rqb3r1BXaBU0dIAJpOxdD45C/6qfBhF4neRtTLyR//Z0lwezf/ixBAoGAUQehXNOpGKV4jO9En9P5PPJOj2LZk4DDWh7op15MBsGMyr1IUUY42TRTzP+6unfgiLq8xYYPjlIeHNFjztjk7nj892R/ykiiUY3+u8w2nHJc0jfQTk4rTM8D2qmRAcrCE7haE8I6FCBA6pe3KOPspT1eYugA5GknNEQyDmoIWqI='
-  iss: 'item-kafka-producer'
-  exp: '30'
+  private-key: ${ITEM_JWT_PRIVATE_KEY:}
+  issuer: ${ITEM_JWT_ISSUER:item-kafka-producer}
+  expiry-minutes: ${ITEM_JWT_EXPIRY_MINUTES:30}
 
 springdoc:
   swagger-ui:
@@ -157,10 +118,8 @@ syslog:
   logging:
     port: 514
     facility: local7
-    # add you IP for sys logs erver here
-    host: 172.18.65.175
+    host: ${SYSLOG_HOST:172.18.65.175}
     level: INFO
-
     pattern: '%d{${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:%5p} [%c:%L] %msg %ex'
     rolling:
       file: ./logs/${spring.application.name}_%d{yyyy-MM-dd-HH}.log.gz
