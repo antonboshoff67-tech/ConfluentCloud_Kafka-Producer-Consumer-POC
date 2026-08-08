@@ -14,7 +14,16 @@ The codebase uses the namespace `com.antontech.itemkafka_poc`.
 - **`KAFKA_SETUP.md`** - how to download, install and configure Apache Kafka locally (KRaft or Docker), and how to create the `Item_Topic` topic used by this project.
 - **`DATABASE_SETUP.md`** - full MS SQL Server and MySQL schema/table creation scripts generated from the `Item` entity, plus how Windows Integrated Authentication works and how to set it up (or use MySQL instead if you don't have SQL Server).
 - **`API_DOCUMENTATION.md`** - every REST endpoint with curl examples, including how to trigger the Flink jobs.
-- **`ARCHITECTURE.md`** - end-to-end architecture diagrams (Mermaid), why Apache Flink is used over a plain Kafka consumer, and exactly which endpoints are synchronous vs. asynchronous (important for the upcoming React front end).
+- **`ARCHITECTURE.md`** - end-to-end architecture diagrams (Mermaid), why Apache Flink is used over a plain Kafka consumer, exactly which endpoints are synchronous vs. asynchronous, and how CORS is configured for the React front end.
+- **`Architecture_ConfluentCloud_Kafka_POC.docx`** - the same architecture document with high-resolution rendered diagrams, ready to share/print.
+- **`sql-scripts/`** - 200-row dummy `Item` seed scripts for both MS SQL Server and MySQL, plus the MySQL sink/consumed-records table DDL.
+
+## React test client
+
+A companion React + Bootstrap UI that exercises every endpoint below (including a paginated
+Item grid, 15 records per page) lives in a separate repository:
+**[ReactJS-UI-For-Item-Kafka-Producer-POC](https://github.com/antonboshoff67-tech/ReactJS-UI-For-Item-Kafka-Producer-POC)**.
+It calls this backend over CORS (see `CorsConfig.java` / `cors.allowed-origins`).
 
 ## What the project currently does
 
