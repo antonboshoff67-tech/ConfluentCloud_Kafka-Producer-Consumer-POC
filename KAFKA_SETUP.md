@@ -42,6 +42,8 @@ A ready-to-use `docker-compose.kafka.yml` is included at the repository root:
 ```powershell
 docker compose -f docker-compose.kafka.yml up -d
 docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --create --topic Item_Topic --partitions 1 --replication-factor 1
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --list
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --describe --topic Item_Topic
 ```
 Stop it later with `docker compose -f docker-compose.kafka.yml down` (add `-v` to also wipe the topic data).
 

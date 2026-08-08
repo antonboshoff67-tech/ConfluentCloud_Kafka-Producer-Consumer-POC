@@ -15,7 +15,8 @@ step-by-step walkthrough for running this *entire* system - backend, Kafka,
 database and the React UI - in **either**:
 - **Developer Machine Mode** (everything installed natively), or
 - **Docker Mode** (`docker compose up`, including a Dockerfile for the backend
-  and a full `docker-compose.full.yml` covering MySQL + Kafka + the backend).
+  and a full `docker-compose.full.yml` covering MySQL + Kafka + the backend), or
+- **AWS EKS Mode** (Kubernetes manifests and deployment commands for EKS).
 
 It also explains exactly which endpoints to test in each mode and clears up
 whether you need Docker Desktop's dashboard to use the app (short answer: no -
@@ -28,6 +29,7 @@ it answers.
 - **`DEVELOPER_GUIDE.md`** - ⭐ start here - native **and** Docker setup, step by step, plus a full documentation map.
 - **`SETUP_GUIDE.md`** - every environment variable mapped to its config property (Kafka, MySQL, SQL Server, TLS keystore/truststore, JWT key).
 - **`KAFKA_SETUP.md`** - deep-dive reference for installing/configuring Apache Kafka (native KRaft or Docker) and creating the `Item_Topic` topic.
+- **`EKS_README.md`** - AWS deployment guide for Amazon EKS, including Kubernetes manifests, ECR image publishing, pod autoscaling, and ECS/Fargate comparison notes.
 - **`DATABASE_SETUP.md`** - full MS SQL Server and MySQL schema/table creation scripts generated from the `Item` entity, plus how Windows Integrated Authentication works and how to set it up (or use MySQL instead if you don't have SQL Server).
 - **`API_DOCUMENTATION.md`** - every REST endpoint with curl examples, including how to trigger the Flink jobs.
 - **`ARCHITECTURE.md`** - end-to-end architecture diagrams (Mermaid), why Apache Flink is used over a plain Kafka consumer, exactly which endpoints are synchronous vs. asynchronous, and how CORS is configured for the React front end.

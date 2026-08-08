@@ -1,10 +1,11 @@
 # Developer Guide
 
 A single, self-contained, step-by-step guide to running this entire system -
-backend, Kafka, database and the React UI - in **two** ways:
+backend, Kafka, database and the React UI - in **three** ways:
 
 1. **Developer Machine Mode** - everything installed natively on your own machine.
 2. **Docker Mode** - everything running in containers, one `docker compose` command.
+3. **AWS EKS Mode** - Kubernetes deployments on Amazon EKS.
 
 If you only want a quick reference for one topic, jump straight to it using
 the [documentation map](#documentation-map) at the end of this file.
@@ -32,7 +33,13 @@ the [documentation map](#documentation-map) at the end of this file.
    - 3.7 [Which endpoints to test in Docker mode](#37-which-endpoints-to-test-in-docker-mode)
    - 3.8 [Useful Docker commands](#38-useful-docker-commands)
    - 3.9 [Docker troubleshooting](#39-docker-troubleshooting)
-4. [Documentation map](#documentation-map)
+4. [AWS EKS Mode](#4-aws-eks-mode)
+   - 4.1 [Why use EKS for this project](#41-why-use-eks-for-this-project)
+   - 4.2 [What gets deployed to EKS](#42-what-gets-deployed-to-eks)
+   - 4.3 [Deploy backend and frontend to EKS](#43-deploy-backend-and-frontend-to-eks)
+   - 4.4 [Horizontal autoscaling (pods)](#44-horizontal-autoscaling-pods)
+   - 4.5 [ECS/Fargate option](#45-ecsfargate-option)
+5. [Documentation map](#documentation-map)
 
 ---
 
@@ -246,6 +253,8 @@ lightweight compose file that ships with this repo:
 ```powershell
 docker compose -f docker-compose.kafka.yml up -d
 docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --create --topic Item_Topic --partitions 1 --replication-factor 1
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --list
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --describe --topic Item_Topic
 ```
 Stop it later with `docker compose -f docker-compose.kafka.yml down` (add
 `-v` to also wipe topic data). Full detail: `KAFKA_SETUP.md`.
@@ -281,6 +290,7 @@ stop following logs (the containers keep running).
 but it's good practice to check explicitly):
 ```powershell
 docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --list
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --describe --topic Item_Topic
 ```
 
 **Step 4 - The backend is now reachable exactly like native mode**, because
@@ -389,6 +399,62 @@ docker compose -f docker-compose.full.yml up -d --build backend
 
 ---
 
+## 4. AWS EKS Mode
+
+This mode is for cloud-native, production-style deployment using Kubernetes on AWS.
+
+### 4.1 Why use EKS for this project
+
+- You want multi-node orchestration, rolling updates, and health-based restarts.
+- You want horizontal scaling across pods under load (HPA).
+- You need one deployment model shared by multiple environments (dev/int/qa/prod).
+- You want managed Kubernetes control plane operations handled by AWS.
+
+### 4.2 What gets deployed to EKS
+
+- Backend Spring Boot app (`item-kafka-backend`) as a `Deployment` + `Service` + optional `HPA`.
+- Frontend React/Nginx app (`item-kafka-ui`) as a `Deployment` + `Service` + optional `HPA`.
+- Config and secrets via `ConfigMap` + `Secret` manifests (do not commit real credentials).
+
+For this POC, Kafka/MySQL are usually external AWS services in EKS mode:
+
+- Kafka: Amazon MSK (recommended) or self-managed Kafka.
+- Database: Amazon RDS for MySQL (recommended).
+
+### 4.3 Deploy backend and frontend to EKS
+
+Complete step-by-step instructions and commands are in `EKS_README.md`.
+
+At a high level:
+
+1. Create EKS cluster and node group.
+2. Build and push backend/frontend images to ECR.
+3. Apply manifests in each repo's `k8s/` folder.
+4. Expose services via `LoadBalancer` or Ingress (ALB).
+5. Validate pods and endpoint health.
+
+### 4.4 Horizontal autoscaling (pods)
+
+Both repos include sample HPA manifests. In EKS:
+
+- `Deployment` sets baseline replica count.
+- `HorizontalPodAutoscaler` scales replicas based on CPU utilization.
+- `Cluster Autoscaler` (or Karpenter) can add/remove worker nodes when pods cannot be scheduled.
+
+This is how pod-level and node-level autoscaling work together.
+
+### 4.5 ECS/Fargate option
+
+If you prefer not to operate Kubernetes, ECS/Fargate is a simpler AWS container path:
+
+- ECS handles task scheduling; Fargate runs tasks serverlessly.
+- Good for teams that want managed containers without Kubernetes APIs.
+- EKS is still better if you need Kubernetes-native tooling/portability.
+
+This project documents both options, but the Kubernetes manifests in `k8s/` target EKS.
+
+---
+
 ## Documentation map
 
 | Question | Read |
@@ -399,7 +465,8 @@ docker compose -f docker-compose.full.yml up -d --build backend
 | How do I set up the database (MySQL or SQL Server)? | `DATABASE_SETUP.md` |
 | Every environment variable, mapped to config | `SETUP_GUIDE.md` |
 | Every REST endpoint, with curl examples | `API_DOCUMENTATION.md` |
-| How do I run everything - native **or** Docker? | **This file** |
+| How do I run everything - local native, local Docker, or AWS EKS? | **This file** |
+| Full AWS EKS deployment steps and commands | `EKS_README.md` |
 | How do I use the React UI to test the backend, click by click? | `ReactJS_UI_User_Guide.docx` |
 | How does the React UI's code work internally? | JSDoc comments in `src/api/apiClient.js`, `src/components/*.jsx`, `src/pages/*.jsx` in the React repo |
 | 200-row dummy data / sink table DDL | `sql-scripts/` |
