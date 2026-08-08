@@ -1,0 +1,12 @@
+Kafka (KRaft mode, single broker, no Zookeeper) for local development/testing of
+ConfluentCloud_Kafka-Producer-Consumer-POC. Not part of the application build; this is a
+convenience file for anyone who doesn't already have Kafka installed locally.
+
+Usage:
+  docker compose -f docker-compose.kafka.yml up -d
+  docker compose -f docker-compose.kafka.yml down          # stop
+  docker compose -f docker-compose.kafka.yml down -v       # stop + wipe data
+
+Once it's up, create the topic used by this project with:
+  docker exec item-kafka-broker kafka-topics.sh --bootstrap-server localhost:9092 --create --topic Item_Topic --partitions 1 --replication-factor 1
+

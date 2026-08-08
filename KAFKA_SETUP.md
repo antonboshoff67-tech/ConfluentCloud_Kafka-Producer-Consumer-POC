@@ -37,6 +37,15 @@ docker run -d --name kafka -p 9092:9092 `
 ```
 This single container runs Kafka in KRaft mode (no separate ZooKeeper needed) and is enough for this POC. Skip straight to section 4 (create the topic) if you use this route.
 
+### Or via the docker-compose file included in this repo (easiest)
+A ready-to-use `docker-compose.kafka.yml` is included at the repository root:
+```powershell
+docker compose -f docker-compose.kafka.yml up -d
+docker exec item-kafka-broker kafka-topics --bootstrap-server localhost:9092 --create --topic Item_Topic --partitions 1 --replication-factor 1
+```
+Stop it later with `docker compose -f docker-compose.kafka.yml down` (add `-v` to also wipe the topic data).
+
+
 ## 2. Configure a local single-broker cluster (KRaft mode, no ZooKeeper)
 
 Modern Kafka (3.x+) can run without ZooKeeper using KRaft. This is the simplest setup for a demo/portfolio project.
