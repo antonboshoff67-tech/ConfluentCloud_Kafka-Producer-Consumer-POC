@@ -37,7 +37,9 @@ spring:
       ddl-auto: update
     show-sql: true
   mysql:
-    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true}
+    # Sink database written to by the Flink "KafkaItemToMysqlJob" - matches
+    # sql-scripts/03_mysql_item_sink_and_consumed_tables.sql (item_poc.ITEM / item_poc.ITEM_CONSUMED).
+    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/item_poc?useSSL=false&allowPublicKeyRetrieval=true}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ITEM_MYSQL_USERNAME:root}
     password: ${ITEM_MYSQL_PASSWORD:change-me}
