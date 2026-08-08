@@ -1,0 +1,11 @@
+target/
+logs/
+.git/
+.idea/
+docs-tools/
+sql-scripts/
+*.docx
+*.md
+node_modules/
+.env
+

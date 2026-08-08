@@ -8,16 +8,34 @@ This repository is a Spring Boot proof of concept that demonstrates three relate
 
 The codebase uses the namespace `com.antontech.itemkafka_poc`.
 
+## 📖 New here? Start with the Developer Guide
+
+**[`DEVELOPER_GUIDE.md`](./DEVELOPER_GUIDE.md)** is the single, self-contained,
+step-by-step walkthrough for running this *entire* system - backend, Kafka,
+database and the React UI - in **either**:
+- **Developer Machine Mode** (everything installed natively), or
+- **Docker Mode** (`docker compose up`, including a Dockerfile for the backend
+  and a full `docker-compose.full.yml` covering MySQL + Kafka + the backend).
+
+It also explains exactly which endpoints to test in each mode and clears up
+whether you need Docker Desktop's dashboard to use the app (short answer: no -
+see its "Do you need a Docker UI to access the app?" section). It ends with a
+**documentation map** linking every other doc below to the specific question
+it answers.
+
 ## Related documentation
 
-- **`SETUP_GUIDE.md`** - step-by-step setup, including exactly which environment variable maps to which config property (Kafka, MySQL, SQL Server, TLS keystore/truststore, JWT key).
-- **`KAFKA_SETUP.md`** - how to download, install and configure Apache Kafka locally (KRaft or Docker), and how to create the `Item_Topic` topic used by this project.
+- **`DEVELOPER_GUIDE.md`** - ⭐ start here - native **and** Docker setup, step by step, plus a full documentation map.
+- **`SETUP_GUIDE.md`** - every environment variable mapped to its config property (Kafka, MySQL, SQL Server, TLS keystore/truststore, JWT key).
+- **`KAFKA_SETUP.md`** - deep-dive reference for installing/configuring Apache Kafka (native KRaft or Docker) and creating the `Item_Topic` topic.
 - **`DATABASE_SETUP.md`** - full MS SQL Server and MySQL schema/table creation scripts generated from the `Item` entity, plus how Windows Integrated Authentication works and how to set it up (or use MySQL instead if you don't have SQL Server).
 - **`API_DOCUMENTATION.md`** - every REST endpoint with curl examples, including how to trigger the Flink jobs.
 - **`ARCHITECTURE.md`** - end-to-end architecture diagrams (Mermaid), why Apache Flink is used over a plain Kafka consumer, exactly which endpoints are synchronous vs. asynchronous, and how CORS is configured for the React front end.
 - **`Architecture_ConfluentCloud_Kafka_POC.docx`** - the same architecture document with high-resolution rendered diagrams, ready to share/print.
 - **`ReactJS_UI_User_Guide.docx`** - step-by-step guide for using the companion React UI to test every backend feature (also included in the React repo).
 - **`sql-scripts/`** - 200-row dummy `Item` seed scripts for both MS SQL Server and MySQL, plus the MySQL sink/consumed-records table DDL.
+- **`Dockerfile`** / **`docker-compose.full.yml`** - containerise and run the whole backend + MySQL + Kafka stack with one command.
+- **`docker-compose.kafka.yml`** - a lighter-weight compose file for just a local Kafka broker.
 
 ## React test client
 
@@ -116,7 +134,7 @@ Example PowerShell session:
 
 ```powershell
 $env:ITEM_KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
-$env:ITEM_MYSQL_URL = "jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true"
+$env:ITEM_MYSQL_URL = "jdbc:mysql://localhost:3306/item_poc?useSSL=false&allowPublicKeyRetrieval=true"
 $env:ITEM_MYSQL_USERNAME = "root"
 $env:ITEM_MYSQL_PASSWORD = "change-me"
 $env:ITEM_JWT_PRIVATE_KEY = "<your RSA private key body or PEM>"
@@ -125,7 +143,7 @@ $env:ITEM_JWT_PRIVATE_KEY = "<your RSA private key body or PEM>"
 ### 3) Run the Spring Boot app
 
 ```powershell
-./mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=dev
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 ### 4) Use the APIs
