@@ -12,6 +12,27 @@ You can run this demo three ways:
 
 Both full DDL scripts (SQL Server and MySQL) are below, generated directly from the column mappings in `src/main/java/com/antontech/itemkafka_poc/model/Item.java`.
 
+### Ready-to-run seed scripts
+
+For a quick demo (e.g. to populate the React front end's Item grid), the `sql-scripts/` folder at the repository root contains ready-to-run scripts with **200 dummy `Item` records each** (`ITEM-0001` .. `ITEM-0200`):
+
+| Script | Target | Purpose |
+|---|---|---|
+| `sql-scripts/01_mssql_item_seed_200.sql` | MS SQL Server | Creates `ItemPoc.dbo.ITEM` and seeds 200 rows. For anyone running the original SQL Server -> Kafka -> MySQL topology. |
+| `sql-scripts/02_mysql_item_source_seed_200.sql` | MySQL | Creates `item_poc_source.ITEM` and seeds 200 rows. **This is what this POC's `dev` profile actually points `spring.datasource` at** - MySQL is used for the source table instead of SQL Server. |
+| `sql-scripts/03_mysql_item_sink_and_consumed_tables.sql` | MySQL | Creates the `item_poc.ITEM` sink table (upserted into by `KafkaItemToMysqlJob`) plus an optional `item_poc.ITEM_CONSUMED` audit table that can record which consumer group consumed which item and when. |
+
+Run with, e.g.:
+
+```powershell
+mysql -u root -p < sql-scripts\02_mysql_item_source_seed_200.sql
+mysql -u root -p < sql-scripts\03_mysql_item_sink_and_consumed_tables.sql
+```
+
+```powershell
+sqlcmd -S localhost -E -i sql-scripts\01_mssql_item_seed_200.sql
+```
+
 ---
 
 ## 1. MS SQL Server source setup

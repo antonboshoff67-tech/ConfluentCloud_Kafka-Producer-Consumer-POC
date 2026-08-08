@@ -13,8 +13,14 @@ spring:
   application:
     name: item-kafka-producer-poc
   datasource:
-    url: ${ITEM_MSSQL_URL:jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false}
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    # Defaults to the MySQL "source" table (item_poc_source) so this POC works
+    # end-to-end with MySQL only, no SQL Server required. Override both the
+    # URL and driver to point back at SQL Server if you prefer that topology
+    # (see DATABASE_SETUP.md / sql-scripts/01_mssql_item_seed_200.sql).
+    url: ${ITEM_MSSQL_URL:jdbc:mysql://localhost:3306/item_poc_source?useSSL=false&allowPublicKeyRetrieval=true}
+    driver-class-name: ${ITEM_DATASOURCE_DRIVER:com.mysql.cj.jdbc.Driver}
+    username: ${ITEM_MSSQL_USERNAME:root}
+    password: ${ITEM_MSSQL_PASSWORD:change-me}
   jpa:
     hibernate:
       ddl-auto: update

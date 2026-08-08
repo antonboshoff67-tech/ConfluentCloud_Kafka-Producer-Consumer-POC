@@ -122,6 +122,7 @@ sequenceDiagram
 | Layer | Class(es) | Responsibility |
 |---|---|---|
 | REST - producer | `ItemProducerController`, `ItemProducerService` | Read `Item` rows via JPA, publish to Kafka |
+| REST - items grid | `ItemController` | Paginated `GET items/v1` (and `GET items/count/v1`) used by the React front end's Item grid/pager |
 | REST - consumer | `ItemConsumerController`, `ItemConsumerService` | On-demand poll of the shared Kafka topic |
 | REST - gateway test | `MsgConsumerController`, `MsgRoutingServiceImpl`, `JwtTokenUtil` | Demonstrates JWT-signed / optionally mTLS-secured calls to an external gateway |
 | REST - Flink control plane | `FlinkJobController`, `FlinkJobService`, `JobStatus` | Starts/tracks the Flink jobs on demand instead of requiring a separate cluster submission |
@@ -192,6 +193,8 @@ the background (the UI must poll or otherwise check back later).
 | Endpoint | Controller method | Sync or Async? | Why |
 |---|---|---|---|
 | `POST /item-kafka/app/publish-items/v1` | `ItemProducerController.createItemKafkaTopic()` | **Synchronous** | Reads up to 100 rows and calls `kafkaTemplate.send(...).get()` (blocking) for each one before returning |
+| `GET /item-kafka/app/items/v1` | `ItemController.listItems()` | **Synchronous** | Simple paginated JPA `findAll(Pageable)` query, no external I/O |
+| `GET /item-kafka/app/items/count/v1` | `ItemController.countItems()` | **Synchronous** | Simple JPA `count()` query |
 | `GET /item-kafka/consumer/consume-status/v1` | `ItemConsumerController.checkConsumerStatus()` | **Synchronous** | In-memory boolean check, no I/O |
 | `POST /item-kafka/consumer/manual-consume/v1` | `ItemConsumerController.manualConsumeItem()` | **Synchronous (but slow - up to ~30s)** | Blocks the HTTP request thread for the whole poll loop before responding; a front end should show a spinner/loading state for the full duration |
 | `POST /item-kafka/app/send-items/v1` | `MsgConsumerController.sendItemsToKafka()` | **Synchronous** | Builds the JWT and prepares the request inline; no background thread involved |
@@ -261,4 +264,50 @@ flowchart TD
 No credential, connection string, keystore password or private key is ever
 committed to source control - see `SETUP_GUIDE.md` for how to supply your own
 values for a local demo.
+
+## 9. CORS: how the React front end is allowed to call this API
+
+The companion React UI (`ReactJS-UI-For-Item-Kafka-Producer-POC`, typically
+served by Vite on `http://localhost:5173`) runs on a **different origin**
+(different scheme+host+port combination) than this API
+(`http://localhost:8082`). Browsers enforce the **Same-Origin Policy**: by
+default, JavaScript running on one origin is not allowed to read the response
+of an HTTP request made to a different origin, even if the server processed
+the request successfully. **CORS (Cross-Origin Resource Sharing)** is the
+mechanism browsers use to relax that restriction, driven entirely by response
+headers the *server* sends back.
+
+```mermaid
+sequenceDiagram
+    participant Browser as Browser (React UI, localhost:5173)
+    participant API as Spring Boot API (localhost:8082)
+
+    Note over Browser,API: "Simple" GET/POST with a non-trivial Content-Type<br/>triggers a CORS pre-flight first
+    Browser->>API: OPTIONS /item-kafka/app/items/v1 (pre-flight)<br/>Origin: http://localhost:5173
+    API-->>Browser: 200 OK<br/>Access-Control-Allow-Origin: http://localhost:5173<br/>Access-Control-Allow-Methods: GET, POST, ...
+    Browser->>API: GET /item-kafka/app/items/v1<br/>Origin: http://localhost:5173
+    API-->>Browser: 200 OK + JSON body<br/>Access-Control-Allow-Origin: http://localhost:5173
+    Note over Browser: Browser sees a matching<br/>Access-Control-Allow-Origin header<br/>and hands the response to the calling JS
+```
+
+How it is wired up in this repository:
+
+- `CorsConfig` (`src/main/java/com/antontech/itemkafka_poc/configuration/CorsConfig.java`)
+  registers a `WebMvcConfigurer.addCorsMappings(...)` rule (plus a
+  `CorsConfigurationSource` bean for defence-in-depth if a security filter
+  chain is ever added) that allows `GET/POST/PUT/DELETE/PATCH/OPTIONS`, any
+  request header, and exposes the `Authorization` header, for the configured
+  list of origins.
+- Allowed origins are **externalised**, not hardcoded: `cors.allowed-origins`
+  in `application.yml` (env var `ITEM_CORS_ALLOWED_ORIGINS`, comma-separated),
+  defaulting to `http://localhost:5173,http://localhost:3000` to cover both
+  Vite's and Create-React-App-style dev servers out of the box.
+- No cookies/HTTP-session credentials are used by this API (it is stateless,
+  JWT-signed where auth is relevant), so `allowCredentials` is left `false`
+  and the wildcard-style broad `allowedHeaders("*")` is safe here - if this
+  were extended to use cookie-based sessions, `allowCredentials(true)` would
+  require an **explicit** origin list instead of a wildcard.
+- For a production deployment, set `ITEM_CORS_ALLOWED_ORIGINS` to the real
+  front-end domain(s) only (e.g. `https://items.antontech.co.za`) to avoid
+  leaving local dev ports open on the public API.
 

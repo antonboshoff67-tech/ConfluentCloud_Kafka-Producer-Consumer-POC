@@ -30,6 +30,30 @@ Response: `200 OK` with the body `Items sent to Kafka topic successfully!`
 
 ---
 
+## Item grid / pagination (used by the React front end)
+
+### `GET /item-kafka/app/items/v1?page=0&size=15`
+Returns a single page of `Item` rows (sorted by `item_id` ascending) as a
+Spring Data `Page<Item>` JSON object (`content`, `totalElements`,
+`totalPages`, `number`, `size`, etc.). Powers the React UI's Item grid/pager.
+
+Implemented by: `ItemController.listItems()`
+
+```powershell
+curl.exe "http://localhost:8082/item-kafka/app/items/v1?page=0&size=15"
+```
+
+### `GET /item-kafka/app/items/count/v1`
+Returns the total number of `Item` rows in the source table as a plain number.
+
+Implemented by: `ItemController.countItems()`
+
+```powershell
+curl.exe "http://localhost:8082/item-kafka/app/items/count/v1"
+```
+
+---
+
 ## Item Consumer
 
 ### `GET /item-kafka/consumer/consume-status/v1`

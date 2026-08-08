@@ -14,7 +14,7 @@ spring:
     name: item-kafka-producer-poc
   datasource:
     url: ${ITEM_MSSQL_URL:jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false}
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    driver-class-name: ${ITEM_DATASOURCE_DRIVER:com.microsoft.sqlserver.jdbc.SQLServerDriver}
   jpa:
     hibernate:
       ddl-auto: update

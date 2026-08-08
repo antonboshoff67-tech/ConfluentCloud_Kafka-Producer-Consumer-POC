@@ -1,6 +1,12 @@
 server:
   port: 8082
 
+# Origins allowed to call this API directly from a browser (CORS). Comma-separated.
+# Defaults cover the React UI's Vite dev server (5173) and CRA-style dev servers (3000).
+# See ARCHITECTURE.md, "CORS" section, and CorsConfig.java for details.
+cors:
+  allowed-origins: ${ITEM_CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+
 keys:
   ssl:
     enabled: false
@@ -15,8 +21,14 @@ spring:
   profiles:
     active: swagger, dev
   datasource:
-    url: ${ITEM_MSSQL_URL:jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false}
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    # Defaults to the MySQL "source" table (item_poc_source) so this POC works
+    # end-to-end with MySQL only, no SQL Server required. Override both the
+    # URL and driver to point back at SQL Server if you prefer that topology
+    # (see DATABASE_SETUP.md / sql-scripts/01_mssql_item_seed_200.sql).
+    url: ${ITEM_MSSQL_URL:jdbc:mysql://localhost:3306/item_poc_source?useSSL=false&allowPublicKeyRetrieval=true}
+    driver-class-name: ${ITEM_DATASOURCE_DRIVER:com.mysql.cj.jdbc.Driver}
+    username: ${ITEM_MSSQL_USERNAME:root}
+    password: ${ITEM_MSSQL_PASSWORD:change-me}
     # Source table read by the Flink "MssqlItemToKafkaJob". Override with ITEM_MSSQL_SOURCE_TABLE
     # if your Item table has a different name/schema, e.g. dbo.ITEM
     source-table-name: ${ITEM_MSSQL_SOURCE_TABLE:ITEM}
