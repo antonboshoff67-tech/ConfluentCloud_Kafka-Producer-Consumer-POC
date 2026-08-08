@@ -16,6 +16,7 @@ The codebase uses the namespace `com.antontech.itemkafka_poc`.
 - **`API_DOCUMENTATION.md`** - every REST endpoint with curl examples, including how to trigger the Flink jobs.
 - **`ARCHITECTURE.md`** - end-to-end architecture diagrams (Mermaid), why Apache Flink is used over a plain Kafka consumer, exactly which endpoints are synchronous vs. asynchronous, and how CORS is configured for the React front end.
 - **`Architecture_ConfluentCloud_Kafka_POC.docx`** - the same architecture document with high-resolution rendered diagrams, ready to share/print.
+- **`ReactJS_UI_User_Guide.docx`** - step-by-step guide for using the companion React UI to test every backend feature (also included in the React repo).
 - **`sql-scripts/`** - 200-row dummy `Item` seed scripts for both MS SQL Server and MySQL, plus the MySQL sink/consumed-records table DDL.
 
 ## React test client
