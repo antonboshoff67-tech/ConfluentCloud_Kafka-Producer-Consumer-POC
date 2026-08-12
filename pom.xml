@@ -17,6 +17,21 @@
     <name>item-kafka-producer-poc</name>
     <description>Kafka producer/consumer and Flink proof of concept</description>
 
+    <licenses>
+        <license>
+            <name>Proprietary - All Rights Reserved (see LICENSE file)</name>
+            <url>https://github.com/antonboshoff67-tech/ConfluentCloud_Kafka-Producer-Consumer-POC/blob/main/LICENSE</url>
+            <distribution>manual</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Anton Boshoff</name>
+            <url>https://github.com/antonboshoff67-tech</url>
+        </developer>
+    </developers>
+
     <properties>
         <java.version>11</java.version>
         <flink.version>1.20.1</flink.version>

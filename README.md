@@ -205,3 +205,11 @@ The project includes three Flink entry points, all under `com.antontech.itemkafk
 - The sample `fnb.co.za`-style keystore reference has been replaced with the safer `antontech.co.za` namespace in configuration.
 
 See `SETUP_GUIDE.md` for the full environment-variable-to-config mapping and step-by-step setup instructions.
+
+## 📜 License
+
+**© 2026 Anton Boshoff. All Rights Reserved.**
+
+This repository is public for **portfolio/demonstration purposes only** — it is **not** open-source. See the [`LICENSE`](./LICENSE) file for full terms. In short: you're welcome to view/clone it to see how it works, but copying, redistributing, reselling, or building derivative products from this code requires the Author's written permission. Recruiters/hiring managers: browse away — that's exactly what this is here for!
+
+
