@@ -27,6 +27,7 @@ it answers.
 ## Related documentation
 
 - **`DEVELOPER_GUIDE.md`** - ⭐ start here - native **and** Docker setup, step by step, plus a full documentation map.
+- **[`TECHNOLOGY_ARCHITECTURE_COMPARISON.md`](./TECHNOLOGY_ARCHITECTURE_COMPARISON.md)** - pros/cons and "when to use what" comparison of this Spring Boot (blocking) POC vs. the sibling **Spring WebFlux (reactive)** and **Node.js/Express.js** POCs, plus a detailed AWS-native architecture for a banking agent-desk chatbot covering Cisco VoIP and text channels (WhatsApp/Facebook/web chat) using Amazon Lex, Amazon Connect, and Kafka/Flink.
 - **`SETUP_GUIDE.md`** - every environment variable mapped to its config property (Kafka, MySQL, SQL Server, TLS keystore/truststore, JWT key).
 - **`KAFKA_SETUP.md`** - deep-dive reference for installing/configuring Apache Kafka (native KRaft or Docker) and creating the `Item_Topic` topic.
 - **`EKS_README.md`** - AWS deployment guide for Amazon EKS, including Kubernetes manifests, ECR image publishing, pod autoscaling, and ECS/Fargate comparison notes.
