@@ -20,7 +20,7 @@
     "item-kafka/app/publish-items/v1": {
       "post": {
         "tags": [
-          "Reading AMOS Item Table and publish them to the Kafka Producer"
+          "Reading Item Table and publish them to the Kafka Producer"
         ],
         "summary": "Publish Item to Kafka",
         "description": "Item Messages published to Kafka",

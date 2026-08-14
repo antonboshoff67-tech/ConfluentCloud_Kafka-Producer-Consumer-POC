@@ -202,8 +202,11 @@ The project includes three Flink entry points, all under `com.antontech.itemkafk
 ## Security notes for sharing this project
 
 - Do not commit real JWT keys, keystore passwords, truststore passwords, or database passwords.
-- Keep your actual secrets in environment variables or a local file excluded from Git.
-- The sample `fnb.co.za`-style keystore reference has been replaced with the safer `antontech.co.za` namespace in configuration.
+- Keep your actual secrets out of source control entirely. Recommended options depending on where the app runs:
+  - **Local/dev machine:** environment variables, or a local `application-local.yml`/`.env` file excluded from Git (see `.gitignore`).
+  - **Shared server (non-cloud) environments:** a **Spring Cloud Config Server** (backed by an encrypted/private Git repo or Vault) so secrets are centrally managed and never baked into the jar, or a secrets file mounted on the server outside the deployable artifact (e.g. `/etc/app-secrets/`) and loaded via `spring.config.import`.
+  - **AWS/cloud deployments:** **AWS Secrets Manager** (or AWS Systems Manager Parameter Store for less-sensitive config), retrieved at startup via the AWS SDK or the Spring Cloud AWS Secrets Manager integration — this is the approach documented in `EKS_README.md`/`AWS_*` docs for the EKS deployment path.
+- All hostnames, database names, and system/source identifiers in this repo's docs and seed data (e.g. `SQLSERVER01\DEVINSTANCE`, `CS_Demo_Central_Master_Data`, `OMNI_SYS`) are **fictitious placeholders** created for this portfolio demo — they do not reference any real company's infrastructure or systems.
 
 See `SETUP_GUIDE.md` for the full environment-variable-to-config mapping and step-by-step setup instructions.
 

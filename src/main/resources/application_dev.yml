@@ -1,4 +1,4 @@
-server:
+﻿server:
   port: 8082
 
 keys:
@@ -26,7 +26,7 @@ spring:
       ddl-auto: update
     show-sql: true
   mysql:
-    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true}
+    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/CS_Demo_Central_Master_Data?useSSL=false&allowPublicKeyRetrieval=true}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ITEM_MYSQL_USERNAME:root}
     password: ${ITEM_MYSQL_PASSWORD:change-me}

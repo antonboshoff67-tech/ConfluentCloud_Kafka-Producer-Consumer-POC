@@ -1,4 +1,4 @@
-package com.antontech.itemkafka_poc.model;
+﻿package com.antontech.itemkafka_poc.model;
 
 //import javax.persistence.*;
 import com.google.gson.annotations.SerializedName;
@@ -282,25 +282,25 @@ public class Item implements Serializable  {
     @SerializedName("tranLevel")
     private Integer tranLevel;
 
-    @Column(name = "ww_colour", nullable = true) // This field can be NULL
-    @SerializedName("wwColour")
-    private String wwColour;
+    @Column(name = "std_colour", nullable = true) // This field can be NULL
+    @SerializedName("stdColour")
+    private String stdColour;
 
-    @Column(name = "ww_size", nullable = true) // This field can be NULL
-    @SerializedName("wwSize")
-    private String wwSize;
+    @Column(name = "std_size", nullable = true) // This field can be NULL
+    @SerializedName("stdSize")
+    private String stdSize;
 
-    @Column(name = "ww_static_mass", nullable = true) // This field can be NULL
-    @SerializedName("wwStaticMass")
-    private BigDecimal wwStaticMass;
+    @Column(name = "std_static_mass", nullable = true) // This field can be NULL
+    @SerializedName("stdStaticMass")
+    private BigDecimal stdStaticMass;
 
-    @Column(name = "ww_style", nullable = true) // This field can be NULL
-    @SerializedName("wwStyle")
-    private String wwStyle;
+    @Column(name = "std_style", nullable = true) // This field can be NULL
+    @SerializedName("stdStyle")
+    private String stdStyle;
 
-    @Column(name = "ww_style_colour", nullable = true) // This field can be NULL
-    @SerializedName("wwStyleColour")
-    private String wwStyleColour;
+    @Column(name = "std_style_colour", nullable = true) // This field can be NULL
+    @SerializedName("stdStyleColour")
+    private String stdStyleColour;
 
     @Column(name = "variable_weight_ind", nullable = true) // This field can be NULL
     @SerializedName("variableWeightInd")
@@ -900,44 +900,44 @@ public class Item implements Serializable  {
         this.tranLevel = tranLevel;
     }
 
-    public String getWwColour() {
-        return wwColour;
+    public String getStdColour() {
+        return stdColour;
     }
 
-    public void setWwColour(String wwColour) {
-        this.wwColour = wwColour;
+    public void setStdColour(String stdColour) {
+        this.stdColour = stdColour;
     }
 
-    public String getWwSize() {
-        return wwSize;
+    public String getStdSize() {
+        return stdSize;
     }
 
-    public void setWwSize(String wwSize) {
-        this.wwSize = wwSize;
+    public void setStdSize(String stdSize) {
+        this.stdSize = stdSize;
     }
 
-    public BigDecimal getWwStaticMass() {
-        return wwStaticMass;
+    public BigDecimal getStdStaticMass() {
+        return stdStaticMass;
     }
 
-    public void setWwStaticMass(BigDecimal wwStaticMass) {
-        this.wwStaticMass = wwStaticMass;
+    public void setStdStaticMass(BigDecimal stdStaticMass) {
+        this.stdStaticMass = stdStaticMass;
     }
 
-    public String getWwStyle() {
-        return wwStyle;
+    public String getStdStyle() {
+        return stdStyle;
     }
 
-    public void setWwStyle(String wwStyle) {
-        this.wwStyle = wwStyle;
+    public void setStdStyle(String stdStyle) {
+        this.stdStyle = stdStyle;
     }
 
-    public String getWwStyleColour() {
-        return wwStyleColour;
+    public String getStdStyleColour() {
+        return stdStyleColour;
     }
 
-    public void setWwStyleColour(String wwStyleColour) {
-        this.wwStyleColour = wwStyleColour;
+    public void setStdStyleColour(String stdStyleColour) {
+        this.stdStyleColour = stdStyleColour;
     }
 
     public Character getVariableWeightInd() {

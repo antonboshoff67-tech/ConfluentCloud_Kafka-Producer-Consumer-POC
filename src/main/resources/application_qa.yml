@@ -1,4 +1,4 @@
-server:
+﻿server:
   port: 8082
 
 keys:
@@ -13,14 +13,14 @@ spring:
   application:
     name: item-kafka-producer-poc
   datasource:
-    url: ${ITEM_MSSQL_URL:jdbc:sqlserver://C21SQL04\\AMOS.1:1433;databaseName=CS_Caissa_Central_Master_Data;integratedSecurity=true;encrypt=false}
+    url: ${ITEM_MSSQL_URL:jdbc:sqlserver://SQLSERVER01\\DEVINSTANCE:1433;databaseName=CS_Demo_Central_Master_Data;integratedSecurity=true;encrypt=false}
     driver-class-name: ${ITEM_DATASOURCE_DRIVER:com.microsoft.sqlserver.jdbc.SQLServerDriver}
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
   mysql:
-    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/cs_caissa_central_master_data?useSSL=false&allowPublicKeyRetrieval=true}
+    jdbcUrl: ${ITEM_MYSQL_URL:jdbc:mysql://localhost:3306/CS_Demo_Central_Master_Data?useSSL=false&allowPublicKeyRetrieval=true}
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${ITEM_MYSQL_USERNAME:root}
     password: ${ITEM_MYSQL_PASSWORD:change-me}
