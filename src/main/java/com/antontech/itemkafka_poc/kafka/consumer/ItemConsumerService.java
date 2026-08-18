@@ -10,7 +10,11 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
+import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
+import org.springframework.kafka.listener.MessageListenerContainer;
+import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
@@ -20,21 +24,27 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Provides an on-demand ("manual") Kafka consumer for the shared Item topic,
- * used by {@link com.antontech.itemkafka_poc.controller.ItemConsumerController}
- * to demonstrate polling for messages outside of a {@code @KafkaListener}.
+ * Provides both an always-on {@code @KafkaListener} consumer (auto/continuous
+ * mode, consumer group {@code item_group}) and an on-demand ("manual") Kafka
+ * consumer for the shared Item topic, used by
+ * {@link com.antontech.itemkafka_poc.controller.ItemConsumerController} to
+ * demonstrate both consumption styles side by side.
  */
 @Service
 public class ItemConsumerService {
 
     private static final Logger log = LoggerFactory.getLogger(ItemConsumerService.class);
     private static final long POLL_TIMEOUT_MILLIS = 30000;
+    private static final String AUTO_LISTENER_ID = "itemAutoListenerContainer";
 
     private final Gson gson;
     private final KafkaProperties kafkaProperties;
 
     @Autowired
     private ConcurrentKafkaListenerContainerFactory<String, String> manualKafkaListenerContainerFactory;
+
+    @Autowired
+    private KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry;
 
     /** @param kafkaProperties supplies the shared Item topic name to consume from. */
     @Autowired
@@ -89,11 +99,46 @@ public class ItemConsumerService {
     }
 
     /**
-     * @return whether an always-on {@code @KafkaListener} consumer is currently registered/active.
-     * This POC does not currently register a continuous listener, so this always returns {@code false};
-     * it is a placeholder for wiring in a real listener health check.
+     * Always-on, continuously-running consumer for the shared Item topic, registered
+     * via Spring Kafka's {@code @KafkaListener} annotation (as opposed to the manual,
+     * on-demand polling done in {@link #manualConsume(String)}). Backed by the
+     * {@code kafkaListenerContainerFactory} bean (consumer group {@code item_group},
+     * concurrency 3, manual ack mode) defined in {@code KafkaConsumerConfig}.
+     * <p>
+     * Spring Kafka automatically starts this listener container on application
+     * startup and keeps it running/polling in the background for the lifetime of
+     * the application - no manual trigger is required.
+     *
+     * @param record the raw Kafka record consumed from the shared Item topic.
+     * @param acknowledgment used to manually commit the offset once the record has
+     *                        been processed successfully (required since the container
+     *                        factory uses {@code AckMode.MANUAL}).
+     */
+    @KafkaListener(
+            id = AUTO_LISTENER_ID,
+            topics = "${spring.kafka.item-topic-name}",
+            groupId = "item_group",
+            containerFactory = "kafkaListenerContainerFactory")
+    public void consumeItemAuto(ConsumerRecord<String, String> record, Acknowledgment acknowledgment) {
+        try {
+            Item item = gson.fromJson(record.value(), Item.class);
+            if (item != null) {
+                log.info("[@KafkaListener:item_group] Auto-consumed item {} (partition={}, offset={})",
+                        item.getItemId(), record.partition(), record.offset());
+            }
+        } catch (Exception e) {
+            log.error("[@KafkaListener:item_group] Error processing message {}", record.key(), e);
+        } finally {
+            acknowledgment.acknowledge();
+        }
+    }
+
+    /**
+     * @return whether the always-on {@code @KafkaListener} consumer container
+     * ({@value #AUTO_LISTENER_ID}) is currently registered and actively running.
      */
     public boolean isRunning() {
-        return false;
+        MessageListenerContainer container = kafkaListenerEndpointRegistry.getListenerContainer(AUTO_LISTENER_ID);
+        return container != null && container.isRunning();
     }
 }

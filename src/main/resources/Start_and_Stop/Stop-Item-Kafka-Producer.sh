@@ -5,4 +5,4 @@
 #fi;
 #!/bin/bash
 
-kill -9 `ps -ef | grep java | grep EF-Hello_World-Agent-POC | awk {'print $2'}`
+kill -9 `ps -ef | grep java | grep Item-Kafka-Producer-POC | awk {'print $2'}`

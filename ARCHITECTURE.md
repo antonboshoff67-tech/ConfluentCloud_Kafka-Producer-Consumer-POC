@@ -92,6 +92,14 @@ sequenceDiagram
 
 ## 3. End-to-end sequence: Spring Kafka producer/consumer path (lighter demo)
 
+This POC demonstrates **both** Kafka consumption styles against the same
+`Item_Topic`: an always-on `@KafkaListener` consumer that Spring Kafka starts
+automatically at application boot (no HTTP trigger needed), and an on-demand
+manual `KafkaConsumer` poll triggered via REST. The sequence diagram below
+covers the on-demand/manual path, since that's the one driven by an explicit
+client request; the `@KafkaListener` path runs continuously in the
+background the moment the app starts.
+
 ```mermaid
 sequenceDiagram
     participant Client
@@ -109,6 +117,8 @@ sequenceDiagram
     ItemProducerService->>Kafka: send(topic, key, itemJson) x N
     ItemProducerController-->>Client: 200 OK
 
+    Note over ItemConsumerService,Kafka: In parallel, in the background:<br/>@KafkaListener consumeItemAuto() continuously<br/>polls Item_Topic (group item_group) and<br/>auto-acknowledges each record - no client call needed.
+
     Client->>ItemConsumerController: POST /item-kafka/consumer/manual-consume/v1
     ItemConsumerController->>ItemConsumerService: manualConsume(groupId)
     ItemConsumerService->>Kafka: poll() loop (<=30s)
@@ -123,7 +133,7 @@ sequenceDiagram
 |---|---|---|
 | REST - producer | `ItemProducerController`, `ItemProducerService` | Read `Item` rows via JPA, publish to Kafka |
 | REST - items grid | `ItemController` | Paginated `GET items/v1` (and `GET items/count/v1`) used by the React front end's Item grid/pager |
-| REST - consumer | `ItemConsumerController`, `ItemConsumerService` | On-demand poll of the shared Kafka topic |
+| REST - consumer | `ItemConsumerController`, `ItemConsumerService` | Always-on `@KafkaListener` auto-consumer (`consumeItemAuto()`, group `item_group`) **plus** an on-demand manual poll (`manualConsume()`) of the shared Kafka topic |
 | REST - gateway test | `MsgConsumerController`, `MsgRoutingServiceImpl`, `JwtTokenUtil` | Demonstrates JWT-signed / optionally mTLS-secured calls to an external gateway |
 | REST - Flink control plane | `FlinkJobController`, `FlinkJobService`, `JobStatus` | Starts/tracks the Flink jobs on demand instead of requiring a separate cluster submission |
 | Flink - batch source | `MssqlItemToKafkaJob` | One-shot read of up to 100 rows from SQL Server, publish as JSON to Kafka |
@@ -143,11 +153,15 @@ both the SQL Server and MySQL DDL scripts.
 
 ## 6. Why Apache Flink is used here (and what it buys you over the plain Spring Kafka consumer)
 
-The Spring Kafka path (`ItemConsumerService`) is intentionally simple: it
-opens a short-lived `KafkaConsumer`, polls for up to ~30 seconds and stops.
-That's fine for a demo/manual-trigger scenario, but it does not scale and has
-no fault tolerance built in. Apache Flink is used for the "real" replication
-path (`KafkaItemToMysqlJob`) because it provides, largely for free:
+The Spring Kafka consumer side of this app is intentionally shown two ways:
+an always-on `@KafkaListener` (`ItemConsumerService.consumeItemAuto()`,
+consumer group `item_group`, concurrency 3) that Spring Kafka keeps running
+continuously in the background, and a short-lived manual `KafkaConsumer`
+(`ItemConsumerService.manualConsume()`) that opens, polls for up to ~30
+seconds, and stops. Both are useful demo patterns, but neither has the
+production-grade fault tolerance and scale-out story that Apache Flink
+provides for the "real" replication path (`KafkaItemToMysqlJob`), largely for
+free:
 
 - **True unbounded streaming, not polling.** Flink's `KafkaSource` maintains a
   long-lived, continuously-running dataflow that reacts to new Kafka records
@@ -195,7 +209,7 @@ the background (the UI must poll or otherwise check back later).
 | `POST /item-kafka/app/publish-items/v1` | `ItemProducerController.createItemKafkaTopic()` | **Synchronous** | Reads up to 100 rows and calls `kafkaTemplate.send(...).get()` (blocking) for each one before returning |
 | `GET /item-kafka/app/items/v1` | `ItemController.listItems()` | **Synchronous** | Simple paginated JPA `findAll(Pageable)` query, no external I/O |
 | `GET /item-kafka/app/items/count/v1` | `ItemController.countItems()` | **Synchronous** | Simple JPA `count()` query |
-| `GET /item-kafka/consumer/consume-status/v1` | `ItemConsumerController.checkConsumerStatus()` | **Synchronous** | In-memory boolean check, no I/O |
+| `GET /item-kafka/consumer/consume-status/v1` | `ItemConsumerController.checkConsumerStatus()` | **Synchronous** | In-memory check of `KafkaListenerEndpointRegistry.getListenerContainer(...).isRunning()` for the always-on `@KafkaListener` container - no I/O against Kafka itself |
 | `POST /item-kafka/consumer/manual-consume/v1` | `ItemConsumerController.manualConsumeItem()` | **Synchronous (but slow - up to ~30s)** | Blocks the HTTP request thread for the whole poll loop before responding; a front end should show a spinner/loading state for the full duration |
 | `POST /item-kafka/app/send-items/v1` | `MsgConsumerController.sendItemsToKafka()` | **Synchronous** | Builds the JWT and prepares the request inline; no background thread involved |
 | `GET /item-kafka/app/consume-items/v1` | `MsgConsumerController.consumeItemsFromKafka()` | **Synchronous** | Just logs and returns |

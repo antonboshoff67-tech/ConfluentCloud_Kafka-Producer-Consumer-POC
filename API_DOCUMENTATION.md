@@ -56,13 +56,24 @@ curl.exe "http://localhost:8082/item-kafka/app/items/count/v1"
 
 ## Item Consumer
 
-### `GET /item-kafka/consumer/consume-status/v1`
-Reports whether a continuous listener-based consumer is active. This POC
-only demonstrates manual/on-demand polling, so this currently always reports
-not running (`ItemConsumerService.isRunning()` is a placeholder for wiring in
-a real `@KafkaListener` health check).
+This POC demonstrates **two** Kafka consumption styles side by side:
 
-Implemented by: `ItemConsumerController.checkConsumerStatus()`
+1. **Always-on, automatic consumer** - an `@KafkaListener`-annotated method
+   (`ItemConsumerService.consumeItemAuto()`) registered on application startup.
+   It continuously polls the shared Item topic in the background (consumer
+   group `item_group`, concurrency 3, manual ack mode) - no HTTP call is
+   needed to start it; Spring Kafka manages its lifecycle automatically.
+2. **On-demand ("manual") consumer** - a short-lived `KafkaConsumer` opened
+   only when `POST /item-kafka/consumer/manual-consume/v1` is called, used to
+   demonstrate polling for messages outside of a listener container.
+
+### `GET /item-kafka/consumer/consume-status/v1`
+Reports whether the always-on `@KafkaListener` consumer container
+(`itemAutoListenerContainer`) is currently registered and running, by
+checking `KafkaListenerEndpointRegistry.getListenerContainer(...).isRunning()`.
+
+Implemented by: `ItemConsumerController.checkConsumerStatus()` ->
+`ItemConsumerService.isRunning()`
 
 ```powershell
 curl.exe "http://localhost:8082/item-kafka/consumer/consume-status/v1"
@@ -85,6 +96,11 @@ curl.exe -X POST "http://localhost:8082/item-kafka/consumer/manual-consume/v1" `
 Valid `groupId` values: `item_group` or `manual-item-group` (case
 insensitive). Any other value returns a validation message instead of
 polling Kafka.
+
+Note: the `item_group` consumer group is shared between the always-on
+`@KafkaListener` and the manual consumer's ad-hoc polling requests - both
+approaches are shown against the same topic/group purely to illustrate the
+two integration styles; a real system would typically pick one.
 
 ---
 
